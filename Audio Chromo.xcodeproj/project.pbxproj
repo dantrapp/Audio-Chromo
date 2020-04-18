@@ -16,6 +16,8 @@
 		718A939D244B84BE0044B845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718A939B244B84BE0044B845 /* LaunchScreen.storyboard */; };
 		718A93A8244B84BF0044B845 /* Audio_ChromoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93A7244B84BF0044B845 /* Audio_ChromoTests.swift */; };
 		718A93B3244B84BF0044B845 /* Audio_ChromoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93B2244B84BF0044B845 /* Audio_ChromoUITests.swift */; };
+		718A93C8244B854C0044B845 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93C7244B854C0044B845 /* Room.swift */; };
+		718A93CA244B858C0044B845 /* AudioChromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93C9244B858C0044B845 /* AudioChromo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		718A93AE244B84BF0044B845 /* Audio ChromoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio ChromoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		718A93B2244B84BF0044B845 /* Audio_ChromoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_ChromoUITests.swift; sourceTree = "<group>"; };
 		718A93B4244B84BF0044B845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718A93C7244B854C0044B845 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		718A93C9244B858C0044B845 /* AudioChromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioChromo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				718A938D244B84BE0044B845 /* AppDelegate.swift */,
 				718A938F244B84BE0044B845 /* SceneDelegate.swift */,
 				718A9394244B84BE0044B845 /* ContentView.swift */,
+				718A93C6244B853C0044B845 /* Views */,
 				718A9396244B84BE0044B845 /* Assets.xcassets */,
 				718A939B244B84BE0044B845 /* LaunchScreen.storyboard */,
 				718A939E244B84BE0044B845 /* Info.plist */,
@@ -137,6 +142,15 @@
 				718A93B4244B84BF0044B845 /* Info.plist */,
 			);
 			path = "Audio ChromoUITests";
+			sourceTree = "<group>";
+		};
+		718A93C6244B853C0044B845 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				718A93C7244B854C0044B845 /* Room.swift */,
+				718A93C9244B858C0044B845 /* AudioChromo.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +286,8 @@
 			files = (
 				718A938E244B84BE0044B845 /* AppDelegate.swift in Sources */,
 				718A9390244B84BE0044B845 /* SceneDelegate.swift in Sources */,
+				718A93CA244B858C0044B845 /* AudioChromo.swift in Sources */,
+				718A93C8244B854C0044B845 /* Room.swift in Sources */,
 				718A9395244B84BE0044B845 /* ContentView.swift in Sources */,
 				718A9393244B84BE0044B845 /* Audio_Chromo.xcdatamodeld in Sources */,
 			);
