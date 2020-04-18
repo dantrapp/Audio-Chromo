@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		718A938E244B84BE0044B845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A938D244B84BE0044B845 /* AppDelegate.swift */; };
+		718A9390244B84BE0044B845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A938F244B84BE0044B845 /* SceneDelegate.swift */; };
+		718A9393244B84BE0044B845 /* Audio_Chromo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 718A9391244B84BE0044B845 /* Audio_Chromo.xcdatamodeld */; };
+		718A9395244B84BE0044B845 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A9394244B84BE0044B845 /* ContentView.swift */; };
+		718A9397244B84BE0044B845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718A9396244B84BE0044B845 /* Assets.xcassets */; };
+		718A939A244B84BE0044B845 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718A9399244B84BE0044B845 /* Preview Assets.xcassets */; };
+		718A939D244B84BE0044B845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718A939B244B84BE0044B845 /* LaunchScreen.storyboard */; };
+		718A93A8244B84BF0044B845 /* Audio_ChromoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93A7244B84BF0044B845 /* Audio_ChromoTests.swift */; };
+		718A93B3244B84BF0044B845 /* Audio_ChromoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93B2244B84BF0044B845 /* Audio_ChromoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		718A93A4244B84BF0044B845 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 718A9382244B84BE0044B845 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 718A9389244B84BE0044B845;
+			remoteInfo = "Audio Chromo";
+		};
+		718A93AF244B84BF0044B845 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 718A9382244B84BE0044B845 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 718A9389244B84BE0044B845;
+			remoteInfo = "Audio Chromo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		718A938A244B84BE0044B845 /* Audio Chromo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Chromo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		718A938D244B84BE0044B845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		718A938F244B84BE0044B845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		718A9392244B84BE0044B845 /* Audio_Chromo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Audio_Chromo.xcdatamodel; sourceTree = "<group>"; };
+		718A9394244B84BE0044B845 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		718A9396244B84BE0044B845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		718A9399244B84BE0044B845 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		718A939C244B84BE0044B845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		718A939E244B84BE0044B845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718A93A3244B84BF0044B845 /* Audio ChromoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio ChromoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		718A93A7244B84BF0044B845 /* Audio_ChromoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_ChromoTests.swift; sourceTree = "<group>"; };
+		718A93A9244B84BF0044B845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718A93AE244B84BF0044B845 /* Audio ChromoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio ChromoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		718A93B2244B84BF0044B845 /* Audio_ChromoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_ChromoUITests.swift; sourceTree = "<group>"; };
+		718A93B4244B84BF0044B845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		718A9387244B84BE0044B845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718A93A0244B84BF0044B845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718A93AB244B84BF0044B845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		718A9381244B84BE0044B845 = {
+			isa = PBXGroup;
+			children = (
+				718A938C244B84BE0044B845 /* Audio Chromo */,
+				718A93A6244B84BF0044B845 /* Audio ChromoTests */,
+				718A93B1244B84BF0044B845 /* Audio ChromoUITests */,
+				718A938B244B84BE0044B845 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		718A938B244B84BE0044B845 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				718A938A244B84BE0044B845 /* Audio Chromo.app */,
+				718A93A3244B84BF0044B845 /* Audio ChromoTests.xctest */,
+				718A93AE244B84BF0044B845 /* Audio ChromoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		718A938C244B84BE0044B845 /* Audio Chromo */ = {
+			isa = PBXGroup;
+			children = (
+				718A938D244B84BE0044B845 /* AppDelegate.swift */,
+				718A938F244B84BE0044B845 /* SceneDelegate.swift */,
+				718A9394244B84BE0044B845 /* ContentView.swift */,
+				718A9396244B84BE0044B845 /* Assets.xcassets */,
+				718A939B244B84BE0044B845 /* LaunchScreen.storyboard */,
+				718A939E244B84BE0044B845 /* Info.plist */,
+				718A9391244B84BE0044B845 /* Audio_Chromo.xcdatamodeld */,
+				718A9398244B84BE0044B845 /* Preview Content */,
+			);
+			path = "Audio Chromo";
+			sourceTree = "<group>";
+		};
+		718A9398244B84BE0044B845 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				718A9399244B84BE0044B845 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		718A93A6244B84BF0044B845 /* Audio ChromoTests */ = {
+			isa = PBXGroup;
+			children = (
+				718A93A7244B84BF0044B845 /* Audio_ChromoTests.swift */,
+				718A93A9244B84BF0044B845 /* Info.plist */,
+			);
+			path = "Audio ChromoTests";
+			sourceTree = "<group>";
+		};
+		718A93B1244B84BF0044B845 /* Audio ChromoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				718A93B2244B84BF0044B845 /* Audio_ChromoUITests.swift */,
+				718A93B4244B84BF0044B845 /* Info.plist */,
+			);
+			path = "Audio ChromoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		718A9389244B84BE0044B845 /* Audio Chromo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718A93B7244B84BF0044B845 /* Build configuration list for PBXNativeTarget "Audio Chromo" */;
+			buildPhases = (
+				718A9386244B84BE0044B845 /* Sources */,
+				718A9387244B84BE0044B845 /* Frameworks */,
+				718A9388244B84BE0044B845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Audio Chromo";
+			productName = "Audio Chromo";
+			productReference = 718A938A244B84BE0044B845 /* Audio Chromo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		718A93A2244B84BF0044B845 /* Audio ChromoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718A93BA244B84BF0044B845 /* Build configuration list for PBXNativeTarget "Audio ChromoTests" */;
+			buildPhases = (
+				718A939F244B84BF0044B845 /* Sources */,
+				718A93A0244B84BF0044B845 /* Frameworks */,
+				718A93A1244B84BF0044B845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				718A93A5244B84BF0044B845 /* PBXTargetDependency */,
+			);
+			name = "Audio ChromoTests";
+			productName = "Audio ChromoTests";
+			productReference = 718A93A3244B84BF0044B845 /* Audio ChromoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		718A93AD244B84BF0044B845 /* Audio ChromoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718A93BD244B84BF0044B845 /* Build configuration list for PBXNativeTarget "Audio ChromoUITests" */;
+			buildPhases = (
+				718A93AA244B84BF0044B845 /* Sources */,
+				718A93AB244B84BF0044B845 /* Frameworks */,
+				718A93AC244B84BF0044B845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				718A93B0244B84BF0044B845 /* PBXTargetDependency */,
+			);
+			name = "Audio ChromoUITests";
+			productName = "Audio ChromoUITests";
+			productReference = 718A93AE244B84BF0044B845 /* Audio ChromoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		718A9382244B84BE0044B845 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Will Hustle";
+				TargetAttributes = {
+					718A9389244B84BE0044B845 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					718A93A2244B84BF0044B845 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 718A9389244B84BE0044B845;
+					};
+					718A93AD244B84BF0044B845 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 718A9389244B84BE0044B845;
+					};
+				};
+			};
+			buildConfigurationList = 718A9385244B84BE0044B845 /* Build configuration list for PBXProject "Audio Chromo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 718A9381244B84BE0044B845;
+			productRefGroup = 718A938B244B84BE0044B845 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				718A9389244B84BE0044B845 /* Audio Chromo */,
+				718A93A2244B84BF0044B845 /* Audio ChromoTests */,
+				718A93AD244B84BF0044B845 /* Audio ChromoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		718A9388244B84BE0044B845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718A939D244B84BE0044B845 /* LaunchScreen.storyboard in Resources */,
+				718A939A244B84BE0044B845 /* Preview Assets.xcassets in Resources */,
+				718A9397244B84BE0044B845 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718A93A1244B84BF0044B845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718A93AC244B84BF0044B845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		718A9386244B84BE0044B845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718A938E244B84BE0044B845 /* AppDelegate.swift in Sources */,
+				718A9390244B84BE0044B845 /* SceneDelegate.swift in Sources */,
+				718A9395244B84BE0044B845 /* ContentView.swift in Sources */,
+				718A9393244B84BE0044B845 /* Audio_Chromo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718A939F244B84BF0044B845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718A93A8244B84BF0044B845 /* Audio_ChromoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718A93AA244B84BF0044B845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718A93B3244B84BF0044B845 /* Audio_ChromoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		718A93A5244B84BF0044B845 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 718A9389244B84BE0044B845 /* Audio Chromo */;
+			targetProxy = 718A93A4244B84BF0044B845 /* PBXContainerItemProxy */;
+		};
+		718A93B0244B84BF0044B845 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 718A9389244B84BE0044B845 /* Audio Chromo */;
+			targetProxy = 718A93AF244B84BF0044B845 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		718A939B244B84BE0044B845 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				718A939C244B84BE0044B845 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		718A93B5244B84BF0044B845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		718A93B6244B84BF0044B845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		718A93B8244B84BF0044B845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Audio Chromo/Preview Content\"";
+				DEVELOPMENT_TEAM = TL6955A8XV;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Audio Chromo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.willhustle.Audio-Chromo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		718A93B9244B84BF0044B845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Audio Chromo/Preview Content\"";
+				DEVELOPMENT_TEAM = TL6955A8XV;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Audio Chromo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.willhustle.Audio-Chromo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		718A93BB244B84BF0044B845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL6955A8XV;
+				INFOPLIST_FILE = "Audio ChromoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.willhustle.Audio-ChromoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Audio Chromo.app/Audio Chromo";
+			};
+			name = Debug;
+		};
+		718A93BC244B84BF0044B845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL6955A8XV;
+				INFOPLIST_FILE = "Audio ChromoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.willhustle.Audio-ChromoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Audio Chromo.app/Audio Chromo";
+			};
+			name = Release;
+		};
+		718A93BE244B84BF0044B845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL6955A8XV;
+				INFOPLIST_FILE = "Audio ChromoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.willhustle.Audio-ChromoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Audio Chromo";
+			};
+			name = Debug;
+		};
+		718A93BF244B84BF0044B845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL6955A8XV;
+				INFOPLIST_FILE = "Audio ChromoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.willhustle.Audio-ChromoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Audio Chromo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		718A9385244B84BE0044B845 /* Build configuration list for PBXProject "Audio Chromo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718A93B5244B84BF0044B845 /* Debug */,
+				718A93B6244B84BF0044B845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718A93B7244B84BF0044B845 /* Build configuration list for PBXNativeTarget "Audio Chromo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718A93B8244B84BF0044B845 /* Debug */,
+				718A93B9244B84BF0044B845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718A93BA244B84BF0044B845 /* Build configuration list for PBXNativeTarget "Audio ChromoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718A93BB244B84BF0044B845 /* Debug */,
+				718A93BC244B84BF0044B845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718A93BD244B84BF0044B845 /* Build configuration list for PBXNativeTarget "Audio ChromoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718A93BE244B84BF0044B845 /* Debug */,
+				718A93BF244B84BF0044B845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		718A9391244B84BE0044B845 /* Audio_Chromo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				718A9392244B84BE0044B845 /* Audio_Chromo.xcdatamodel */,
+			);
+			currentVersion = 718A9392244B84BE0044B845 /* Audio_Chromo.xcdatamodel */;
+			path = Audio_Chromo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 718A9382244B84BE0044B845 /* Project object */;
+}
