@@ -187,7 +187,7 @@ struct Room: View {
         ),
         RoomColor(
                   color:Color(#colorLiteral(red: 0, green: 0.8653261662, blue: 0.8636087775, alpha: 1)),
-                  name: "Turquoise | Happy",
+                  name: "Turquoise | Clarity",
                   description: "Turquoise, a perfect mix of blue & green, is both calming and cheerful to look at. This healing color is known to balance emotions and induce instant calmness.",
                   moods: "Calm. Control. Happy. Stability.  "
               ),
