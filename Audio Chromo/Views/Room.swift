@@ -58,9 +58,16 @@ struct Room: View {
                                     .font(.system(size: 12, weight: .medium))
                                     .frame(width: 36, height: 36)
                                 
-                                
-                                Text("START")
-                                    .frame(width: 70)
+                                //disable description box on click
+                                Button(action: {
+                                    self.buttonTapped = false
+                                    
+                                }) {
+                                    Text("START")
+                                }
+                                .frame(width: 70)
+
+                                    
                                     
                             }
                             .frame(height: 50)
