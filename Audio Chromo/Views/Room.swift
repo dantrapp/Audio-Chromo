@@ -40,6 +40,7 @@ struct Room: View {
                             Text(self.description)
                                 .font(.system(size: 18, weight: .medium))
                                 .fontWeight(.medium)
+                                .frame(height: 120)
                                 
                             
                             //moods
@@ -63,7 +64,7 @@ struct Room: View {
                         }
                         .padding(20)
                         .frame(width: 350, height: 350)
-                         .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))]), startPoint: .top, endPoint: .bottom))
+                        .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.9892717004, green: 1, blue: 0.9363328815, alpha: 1))]), startPoint: .top, endPoint: .bottom))
                         .clipShape(RoundedRectangle(cornerRadius: 50, style: .continuous))
                         .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 5)
                         .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
@@ -188,15 +189,15 @@ struct Room: View {
         RoomColor(
             color:Color(#colorLiteral(red: 0.331466198, green: 0.1703749895, blue: 0.8207140565, alpha: 1)),
             name: "Indigo | Wisdom",
-            description: "Those seeking wisdom and deep spirituality need look no further than Indigo and shades of purple. Use purple to help transcend to a deeper state of mind.",
+            description: "Those seeking wisdom and deep spirituality need look no further than indigo and shades of purple. Use purple to help transcend to a deeper state of mind.",
             moods: "Dignity. Intuition. Maturity. Wisdom."
         ),
         
         RoomColor(
             color:Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)),
             name: "Violet | Imagination",
-            description: "Much like Indigo, Violet is a soft, yet vibrant shade of purple that offers deep mental relaxation and heightened intuition for those who seek it.",
-            moods: "Artistic. Knowledge. Imagination. Meditation. "
+            description: "Much like indigo, violet is a soft, yet vibrant shade of purple that offers deep mental relaxation and heightened intuition for those who seek it.",
+            moods: "Artistic. Imagination. Knowledge. Meditation. "
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)),
@@ -206,15 +207,15 @@ struct Room: View {
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 0.8110381961, green: 0, blue: 0.7638235688, alpha: 1)),
-            name: "Magenta | Creativity",
+            name: "Magenta | Perception",
             description: "If emotional balance and internal wisdom is what you seek, let magenta be your guide.",
-            moods: "Perception. Vision. "
+            moods: "Balance. Perception. Vision. Wisdom."
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 0.8181771636, green: 0.4467838407, blue: 0.8082491159, alpha: 1)),
-            name: "Pink | Vision",
-            description: "Pink is known to stimulate happiness, reduce aggression and even curb hunger with a soft, compassonate vibe that leaves you feeling protected.",
-            moods: "Calm. Beauty. Soft. Protection."
+            name: "Pink | Compassion",
+            description: "Pink is known to stimulate happiness, reduce aggression and even curb hunger with a soft, compassionate vibe that leaves you feeling protected.",
+            moods: "Calm. Beauty. Protection. Soft."
         )
         
         
