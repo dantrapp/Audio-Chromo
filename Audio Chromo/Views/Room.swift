@@ -46,6 +46,7 @@ struct Room: View {
                             //moods
                             Text(self.moods)
                                 .font(.subheadline)
+                                .fontWeight(.bold)
                                 .multilineTextAlignment(.leading)
                             
                             
@@ -59,16 +60,19 @@ struct Room: View {
                                 
                                 
                                 Text("START")
+                                    .frame(width: 70)
+                                    
                             }
+                            .frame(height: 50)
                             
                         }
                         .padding(20)
                         .frame(width: 350, height: 350)
                         .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.9892717004, green: 1, blue: 0.9363328815, alpha: 1))]), startPoint: .top, endPoint: .bottom))
                         .clipShape(RoundedRectangle(cornerRadius: 50, style: .continuous))
-                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 5)
+                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
                         .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
-                        .shadow(color: Color.black.opacity(0.4), radius: 40, x: 0, y: 40)
+                        .shadow(color: Color.black.opacity(0.3), radius: 30, x: 0, y: 30)
                         
                     }
                     
@@ -118,7 +122,7 @@ struct Room: View {
                         }
                     }
                 }
-                
+            .padding(6)
                 
             }
         }
@@ -156,7 +160,7 @@ struct Room: View {
             moods: "Courage. Energy. Passion. Strength."
         ),
         RoomColor(
-            color:Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)),
+            color:Color(#colorLiteral(red: 1, green: 0.4541525245, blue: 0, alpha: 1)),
             name: "Orange | Creativity",
             description: "Orange radiates warmth and is associated with joy and happiness, much like yellow. Let your creativity flow when taking in the bright confident hues of orange.",
             moods: "Brave. Creative. Happiness. Optimistic. "
@@ -181,9 +185,9 @@ struct Room: View {
                   moods: "Calm. Control. Happy. Stability.  "
               ),
         RoomColor(
-            color:Color(#colorLiteral(red: 0.08957818896, green: 0.233299017, blue: 0.7654716969, alpha: 1)),
+            color:Color(#colorLiteral(red: 0.1072489247, green: 0.3121216893, blue: 1, alpha: 1)),
             name: "Blue | Calming",
-            description: "Blue is often labeled as the calmest color on Earth. Long known for its serene, cooling effect. Give blue a try if you want to relax.",
+            description: "For a good reason blue is labeled as the calmest color on Earth. Long known for its serene, cooling effect. Give blue a try if you want to relax.",
             moods: "Appreciative. Calm. Honest. Serenity."
         ),
         RoomColor(
@@ -212,9 +216,9 @@ struct Room: View {
             moods: "Balance. Perception. Vision. Wisdom."
         ),
         RoomColor(
-            color:Color(#colorLiteral(red: 0.8181771636, green: 0.4467838407, blue: 0.8082491159, alpha: 1)),
+            color:Color(#colorLiteral(red: 1, green: 0.488842916, blue: 0.8082491159, alpha: 1)),
             name: "Pink | Compassion",
-            description: "Pink is known to stimulate happiness, reduce aggression and even curb hunger with a soft, compassionate vibe that leaves you feeling protected.",
+            description: "Pink is known to stimulate happiness, reduce aggression and even curb hunger with a soft, compassionate vibe that leaves you feeling safe and protected.",
             moods: "Calm. Beauty. Protection. Soft."
         )
         
