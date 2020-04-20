@@ -11,7 +11,7 @@ import SwiftUI
 struct Room: View {
     
     @State var buttonTapped = false
-    @State var chooseColor = Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1))
+    @State var chooseColor = Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))
     @State var title = ""
     @State var description = ""
     @State var moods = ""
@@ -31,18 +31,21 @@ struct Room: View {
                     
                     if buttonTapped{
                         //display title
-                        VStack {
+                        VStack(spacing: 8) {
                             Text(self.title)
                                 .font(.title)
                                 .fontWeight(.bold)
                             
                             //description
                             Text(self.description)
-                                .font(.subheadline)
+                                .font(.system(size: 18, weight: .medium))
+                                .fontWeight(.medium)
+                                
                             
                             //moods
                             Text(self.moods)
-                                .font(.caption)
+                                .font(.subheadline)
+                                .multilineTextAlignment(.leading)
                             
                             
                             //start button
@@ -59,8 +62,8 @@ struct Room: View {
                             
                         }
                         .padding(20)
-                        .frame(width: 300, height: 300)
-                        .background(Color.white)
+                        .frame(width: 350, height: 350)
+                         .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))]), startPoint: .top, endPoint: .bottom))
                         .clipShape(RoundedRectangle(cornerRadius: 50, style: .continuous))
                         .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 5)
                         .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
@@ -148,64 +151,70 @@ struct Room: View {
         RoomColor(
             color:Color(#colorLiteral(red: 0.8102983236, green: 0, blue: 0, alpha: 1)),
             name: "Red | Passion",
-            description: "Red has the slowest rate of vibration and the longest wavelength in the color spectrum. The color red is believed to help strengthen the body and internal organs.",
-            moods: "Courage. Drive. Energy. Passion. Strength. Tenacity."
+            description: "Red has the slowest rate of vibration and the longest wavelength in the color spectrum making this a very vibrant, and intense color.",
+            moods: "Courage. Energy. Passion. Strength."
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)),
             name: "Orange | Creativity",
-            description: "This is long text to see how I want to stylize all of this and eventually add a description saying what each color represents. It helps to have a lot of text to explain all of these things and see how to format it correctly.",
-            moods: "Brave. Creative. Pleasure. Optimistic. Spontaneous. "
+            description: "Orange radiates warmth and is associated with joy and happiness, much like yellow. Let your creativity flow when taking in the bright confident hues of orange.",
+            moods: "Brave. Creative. Happiness. Optimistic. "
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 0.9886365533, green: 0.9814520478, blue: 0.3510926366, alpha: 1)),
             name: "Yellow | Joy",
-            description: "This is long text to see how I want to stylize all of this and eventually add a description saying what each color represents. It helps to have a lot of text to explain all of these things and see how to format it correctly.",
-            moods: "Enlightened. Humorous. Joy. Logical. Successful.  "
+            description: "If you're feeling a little down, give the color yellow a try! This cheerful color is know to bring joy and happiness in even the smallest dose.",
+            moods: "Cheerful. Enlightened. Humorous. Joyful."
         ),
         
         RoomColor(
             color:Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)),
             name: "Green | Balance",
-            description: "This is long text to see how I want to stylize all of this and eventually add a description saying what each color represents. It helps to have a lot of text to explain all of these things and see how to format it correctly.",
-            moods: "Accepting. Balance. Harmony. Love.  "
+            description: "The color green is a safe, neutral color that's found right in the middle of the spectrum. Green is known to provide a feeling of balance and harmony.",
+            moods: "Harmony. Love. Peace. Rejuvenation.  "
         ),
+        RoomColor(
+                  color:Color(#colorLiteral(red: 0, green: 0.8653261662, blue: 0.8636087775, alpha: 1)),
+                  name: "Turquoise | Happy",
+                  description: "Turquoise, a perfect mix of blue & green, is both calming and cheerful to look at. This healing color is known to balance emotions and induce instant calmness.",
+                  moods: "Calm. Control. Happy. Stability.  "
+              ),
         RoomColor(
             color:Color(#colorLiteral(red: 0.08957818896, green: 0.233299017, blue: 0.7654716969, alpha: 1)),
             name: "Blue | Calming",
-            description: "This is long text to see how I want to stylize all of this and eventually add a description saying what each color represents. It helps to have a lot of text to explain all of these things and see how to format it correctly.",
-            moods: "Appreciative. Calm. Honest. Self-Expressive."
+            description: "Blue is often labeled as the calmest color on Earth. Long known for its serene, cooling effect. Give blue a try if you want to relax.",
+            moods: "Appreciative. Calm. Honest. Serenity."
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 0.331466198, green: 0.1703749895, blue: 0.8207140565, alpha: 1)),
             name: "Indigo | Wisdom",
-            description: "This is long text to see how I want to stylize all of this and eventually add a description saying what each color represents. It helps to have a lot of text to explain all of these things and see how to format it correctly.",
-            moods: "Dignity. Maturity. Wisdom."
+            description: "Those seeking wisdom and deep spirituality need look no further than Indigo and shades of purple. Use purple to help transcend to a deeper state of mind.",
+            moods: "Dignity. Intuition. Maturity. Wisdom."
         ),
         
         RoomColor(
             color:Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)),
             name: "Violet | Imagination",
-            description: "This is long text to see how I want to stylize all of this and eventually add a description saying what each color represents. It helps to have a lot of text to explain all of these things and see how to format it correctly.",
-            moods: "Artistic. Knowledge. Imagination. Intuition. Meditation.  "
+            description: "Much like Indigo, Violet is a soft, yet vibrant shade of purple that offers deep mental relaxation and heightened intuition for those who seek it.",
+            moods: "Artistic. Knowledge. Imagination. Meditation. "
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)),
             name: "White | Purity",
-            description: "White is not just a color, it's every color. ",
-            moods: "Balance. Harmony. Oneness. Purity. Truth. "
+            description: "White is not just a color, it's every color. To gaze at the color white is to seek perfect balance & harmony with your body and mind. ",
+            moods: "Balance. Harmony. Purity. Truth. "
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 0.8110381961, green: 0, blue: 0.7638235688, alpha: 1)),
-            name: "Magenta | Creative",
-            description: "This is long text to see how I want to stylize all of this and eventually add a description saying what each color represents. It helps to have a lot of text to explain all of these things and see how to format it correctly.",
-            moods: "Energy. Vitality. "
+            name: "Magenta | Creativity",
+            description: "If emotional balance and internal wisdom is what you seek, let magenta be your guide.",
+            moods: "Perception. Vision. "
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 0.8181771636, green: 0.4467838407, blue: 0.8082491159, alpha: 1)),
-            name: "Pink",
-            description: "This is long text to see how I want to stylize all of this and eventually add a description saying what each color represents. It helps to have a lot of text to explain all of these things and see how to format it correctly.",
-            moods: "Energy. Vitality. "
+            name: "Pink | Vision",
+            description: "Pink is known to stimulate happiness, reduce aggression and even curb hunger with a soft, compassonate vibe that leaves you feeling protected.",
+            moods: "Calm. Beauty. Soft. Protection."
         )
         
         
