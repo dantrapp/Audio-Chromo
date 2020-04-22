@@ -28,6 +28,7 @@ struct Room: View {
                     LinearGradient(gradient: Gradient(colors: [chooseColor, chooseColor.opacity(0.08), chooseColor.opacity(0.38), chooseColor.opacity(0.18),  Color.white.opacity(0.42)]), startPoint: .top, endPoint: .bottom)
                     
                     
+                   //when color tapped, display color description box
                     
                     if buttonTapped{
                         //display title
@@ -61,6 +62,17 @@ struct Room: View {
                                 //disable description box on click
                                 Button(action: {
                                     self.buttonTapped = false
+                                    
+                                    //add 5:00 timer
+                                        //5, 4, 3, 2, 1 - START
+                                    
+                                    //add pause button
+                                    
+                                    //add visual effects
+                                    
+                                    //add save room button
+                                    
+                                    //play background music
                                     
                                 }) {
                                     Text("START")
@@ -135,6 +147,61 @@ struct Room: View {
         }
     }
     
+    
+    /*
+     
+     FEATURES & FUNCTIONS
+     
+    // TIMER FUNCTION
+     
+     Start 5:00 Timer (Play Button)
+     - Countdown: 5, 4, 3, 2, 1
+     
+     Timer onEnded trigger
+     - stop animation
+     - stop music
+     - write notes
+     - save room to favorites
+     
+     // ANIMATION FUNCTION (button-based)
+     - Stars
+     - Circles
+     - Oscillating
+     
+     //SHARE THIS ROOM
+     - Connect with friends
+     - Room ID?
+     - Chat?
+     
+     
+     // SAVE ROOM FUNCTION (dialog box)
+     - Save room
+     - Name room
+     - Delete room
+     
+     // NOTES FUNCTION (Modal)
+     - Write down how the room made you feel.
+     
+     // CALENDAR FUNCTION (API)
+     - Sync Notes & Room Data To Calendar
+     
+     //COLOR SLIDER (Gesture)
+     - Choose RGB Values Of Selected Color Based On Slider Or Drag Values
+     
+     //LOGIN DETAILS
+     - Apple ID (FirebaseUI?)
+     
+     //STREAKS FUNCTION
+     - Log
+        - Consecutive Days
+        - Most Used Room
+        - Most Played Music
+        - Record Of Thoughts
+     
+     
+     */
+    
+    
     struct RoomView: View {
         
         var roomColor : RoomColor
@@ -207,8 +274,8 @@ struct Room: View {
         RoomColor(
             color:Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)),
             name: "Violet | Imagination",
-            description: "Much like indigo, violet is a soft, yet vibrant shade of purple that offers deep mental relaxation and heightened intuition for those who seek it.",
-            moods: "Artistic. Imagination. Knowledge. Meditation. "
+            description: "Much like indigo, violet is a soft, yet vibrant shade of purple that offers heightened intuition and deep mental relaxation for those who seek it.",
+            moods: "Artistic. Imagination. Intuition. Relaxed. "
         ),
         RoomColor(
             color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)),
