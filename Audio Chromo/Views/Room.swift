@@ -202,6 +202,8 @@ struct Room: View {
      */
     
     
+    
+    
     struct RoomView: View {
         
         var roomColor : RoomColor
@@ -242,7 +244,7 @@ struct Room: View {
         RoomColor(
             color:Color(#colorLiteral(red: 0.9886365533, green: 0.9814520478, blue: 0.3510926366, alpha: 1)),
             name: "Yellow | Joy",
-            description: "If you're feeling a little down, give the color yellow a try! This cheerful color is know to bring joy and happiness in even the smallest dose.",
+            description: "If you're feeling a little down, give the color yellow a try! This cheerful color is known to bring joy and happiness in even the smallest dose.",
             moods: "Cheerful. Enlightened. Humorous. Joyful."
         ),
         
