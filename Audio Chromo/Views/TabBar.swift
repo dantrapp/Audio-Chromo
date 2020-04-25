@@ -27,11 +27,20 @@ struct TabBar: View {
                                  }
             
             //SOUNDS
-            Room().tabItem {
+            SoundView().tabItem {
                            Image(systemName: "headphones")
                            Text("Sounds")
                        
                        }
+            
+            //PLAY Favorites
+                       Favorites().tabItem {
+                        Image(systemName: "heart.fill")
+                                     .foregroundColor(.red)
+                        Text("Favorites")
+                        
+                                  }
+        
           
         }
     }
