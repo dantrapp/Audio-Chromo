@@ -6,6 +6,13 @@
 //  Copyright © 2020 Will Hustle. All rights reserved.
 //
 
+/***
+Favorites
+ - last played at the top [media playeer card]
+ - list of favorites
+ 
+***/
+
 import SwiftUI
 
 struct Favorites: View {

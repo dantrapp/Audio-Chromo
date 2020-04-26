@@ -93,3 +93,5 @@ struct LogoBox: View {
     }
 }
 
+//detect screen size
+let screen = UIScreen.main.bounds

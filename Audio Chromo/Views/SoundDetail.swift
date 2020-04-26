@@ -16,10 +16,7 @@ struct SoundDetail: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "play.fill").foregroundColor(.black)
-                Text("PLAY\(soundfiles.title)")
-            }
+            MediaPlayer(soundTitle: soundfiles.title, soundIcon: soundfiles.icon)
         }
     .navigationBarTitle(soundfiles.title)
     
