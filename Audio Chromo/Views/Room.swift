@@ -63,12 +63,25 @@ import SwiftUI
 
 struct Room: View {
     
+    //BUTTON TAPPED
     @State var buttonTapped = false
+
+    
+    //MAIN COLOR
     @State var chooseColor = Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))
+    
+    //SELECT COLOR
+    @State var selectColor = false
+    
+    //COLOR VALUES
     @State var title = "Color"
     @State var description = "This is a color"
     @State var moods = "happy"
     @State var icon = "swift"
+    
+    //SLIDER STATE
+    @State var colorSlider : Double = 15
+    
     
     var body: some View {
         
@@ -80,19 +93,34 @@ struct Room: View {
                 ZStack {
                     
                     
-                    //MAIN VIEW COLOR
+                    //MAIN VIEW COLOR - Default Purple
                     
-                    /*
-                     COLOR SLIDER
-                     Change hue from -dark to +light
-                     Use drag gesture and percentages (-50 / +50) to change opacity
-                     */
-                    
-                    chooseColor
+                   
+                    if selectColor {
+                        chooseColor
+                            .opacity(colorSlider * 0.05)
                         .edgesIgnoringSafeArea(.all)
-                    LinearGradient(gradient: Gradient(colors: [chooseColor, chooseColor.opacity(0.08), chooseColor.opacity(0.38), chooseColor.opacity(0.18),  Color.white.opacity(0.42)]), startPoint: .top, endPoint: .bottom)
-                    .opacity(30)
-                    
+                    } else if buttonTapped {
+                        chooseColor
+                                                .edgesIgnoringSafeArea(.all)
+                        //                    LinearGradient(gradient: Gradient(colors: [
+                        //                        chooseColor.opacity(buttonTapped ? ((colorSlider * 0.25) * 0.25) : 1.0),
+                        //                        chooseColor.opacity(buttonTapped ? ((colorSlider * 0.18) * 0.45) : 0.08),
+                        //                        chooseColor.opacity(buttonTapped ? ((colorSlider + 0.38) * 0.65) : 0.38),
+                        //                        chooseColor.opacity(buttonTapped ? ((colorSlider + 0.18) * 0.15) : 0.18),
+                        //                        Color.white.opacity(0.42)]),
+                        //                                   startPoint: .top, endPoint: .bottom)
+                        //                    .opacity(30)
+                        //
+                                            
+                                            //WORKING SINGLE COLOR SLIDER COLOR CHANGE
+                                                .opacity(colorSlider * 0.05)
+                    } else {
+                        chooseColor
+                            .opacity(0.88)
+                        .edgesIgnoringSafeArea(.all)
+                        
+                    }
                     
                    //when color tapped, display color description box
                     
@@ -129,24 +157,39 @@ struct Room: View {
                                 .multilineTextAlignment(.leading)
                             
                             
+                            /*
+                             COLOR SLIDER
+                             Change hue from -dark to +light
+                             Use drag gesture and percentages (10 / 20) to change opacity
+                             */
+                            
+                      
+                                VStack {
+                                    
+                                    Slider(value: $colorSlider, in: 10...20, step: 0.05)
+                                    
+                                    Text("Color Values: \(colorSlider)")
+                                }
+                            
+                                                          
+                            
+                            
+                            
                             //START BUTTON
                             HStack {
                                 Image(systemName: "play.fill")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .font(.system(size: 12, weight: .medium))
-                                    .frame(width: 36, height: 36)
+                                    .frame(width: 20, height: 20)
                                 
                                 
-                                //COLOR DRAG BAR
-                                /*
-                                 drag and change opacity
-                                 .opacity(0.8)
-                                 */
+                               
                                 
-                                //START BUTTON
+                                //SELECT BUTTON
                                 Button(action: {
                                     self.buttonTapped = false
+                                    self.selectColor = true
                                     
                                     //add 5:00 timer
                                         //5, 4, 3, 2, 1 - START
@@ -160,9 +203,9 @@ struct Room: View {
                                     //play background music
                                     
                                 }) {
-                                    Text("START")
+                                    Text("Select Color")
                                 }
-                                .frame(width: 70)
+                                .frame(width: 150)
 
                                     
                                     
@@ -209,6 +252,8 @@ struct Room: View {
                                 
                                 //button tapped
                                 self.buttonTapped = true
+                                
+                               
                                 
                             }) {
                                 
