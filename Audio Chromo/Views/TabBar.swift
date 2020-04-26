@@ -27,7 +27,7 @@ struct TabBar: View {
                                  }
             
             //SOUNDS
-            SoundView().tabItem {
+            SoundList().tabItem {
                            Image(systemName: "headphones")
                            Text("Sounds")
                        

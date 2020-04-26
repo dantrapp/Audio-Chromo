@@ -43,8 +43,9 @@
 		718A93B3244B84BF0044B845 /* Audio_ChromoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93B2244B84BF0044B845 /* Audio_ChromoUITests.swift */; };
 		718A93C8244B854C0044B845 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93C7244B854C0044B845 /* Room.swift */; };
 		718A93CA244B858C0044B845 /* AudioChromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A93C9244B858C0044B845 /* AudioChromo.swift */; };
-		71AEE6DB2454F5F000F7C904 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AEE6DA2454F5F000F7C904 /* SoundView.swift */; };
+		71AEE6DB2454F5F000F7C904 /* SoundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AEE6DA2454F5F000F7C904 /* SoundList.swift */; };
 		71AEE6DD2454F65E00F7C904 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AEE6DC2454F65E00F7C904 /* Favorites.swift */; };
+		71AEE6DF24551BC100F7C904 /* SoundDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AEE6DE24551BC100F7C904 /* SoundDetail.swift */; };
 		71DC81E0244FD13F00883D06 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC81DF244FD13F00883D06 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,8 +109,9 @@
 		718A93B4244B84BF0044B845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		718A93C7244B854C0044B845 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		718A93C9244B858C0044B845 /* AudioChromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioChromo.swift; sourceTree = "<group>"; };
-		71AEE6DA2454F5F000F7C904 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
+		71AEE6DA2454F5F000F7C904 /* SoundList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundList.swift; sourceTree = "<group>"; };
 		71AEE6DC2454F65E00F7C904 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		71AEE6DE24551BC100F7C904 /* SoundDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDetail.swift; sourceTree = "<group>"; };
 		71DC81DF244FD13F00883D06 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,13 +204,13 @@
 				718A938D244B84BE0044B845 /* AppDelegate.swift */,
 				718A938F244B84BE0044B845 /* SceneDelegate.swift */,
 				718A9394244B84BE0044B845 /* ContentView.swift */,
-				718A93C6244B853C0044B845 /* Views */,
-				718A9396244B84BE0044B845 /* Assets.xcassets */,
-				7177B7E9245249D500B1651F /* Lato */,
-				7177B830245249D800B1651F /* Roboto */,
 				718A939B244B84BE0044B845 /* LaunchScreen.storyboard */,
 				718A939E244B84BE0044B845 /* Info.plist */,
 				718A9391244B84BE0044B845 /* Audio_Chromo.xcdatamodeld */,
+				718A9396244B84BE0044B845 /* Assets.xcassets */,
+				718A93C6244B853C0044B845 /* Views */,
+				7177B7E9245249D500B1651F /* Lato */,
+				7177B830245249D800B1651F /* Roboto */,
 				718A9398244B84BE0044B845 /* Preview Content */,
 			);
 			path = "Audio Chromo";
@@ -247,7 +249,8 @@
 				718A93C9244B858C0044B845 /* AudioChromo.swift */,
 				71DC81DF244FD13F00883D06 /* TabBar.swift */,
 				7177B8A8245258B100B1651F /* Modifiers.swift */,
-				71AEE6DA2454F5F000F7C904 /* SoundView.swift */,
+				71AEE6DA2454F5F000F7C904 /* SoundList.swift */,
+				71AEE6DE24551BC100F7C904 /* SoundDetail.swift */,
 				71AEE6DC2454F65E00F7C904 /* Favorites.swift */,
 			);
 			path = Views;
@@ -413,8 +416,9 @@
 				718A93CA244B858C0044B845 /* AudioChromo.swift in Sources */,
 				718A93C8244B854C0044B845 /* Room.swift in Sources */,
 				71AEE6DD2454F65E00F7C904 /* Favorites.swift in Sources */,
+				71AEE6DF24551BC100F7C904 /* SoundDetail.swift in Sources */,
 				7177B8A9245258B100B1651F /* Modifiers.swift in Sources */,
-				71AEE6DB2454F5F000F7C904 /* SoundView.swift in Sources */,
+				71AEE6DB2454F5F000F7C904 /* SoundList.swift in Sources */,
 				718A9395244B84BE0044B845 /* ContentView.swift in Sources */,
 				718A9393244B84BE0044B845 /* Audio_Chromo.xcdatamodeld in Sources */,
 				71DC81E0244FD13F00883D06 /* TabBar.swift in Sources */,
