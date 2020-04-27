@@ -139,6 +139,7 @@ struct Room: View {
                                     .font(.system(size:22))
                                     .fontWeight(.bold)
                             }
+                        
                             
                             
                             //DESCRIPTION
@@ -168,7 +169,7 @@ struct Room: View {
                                     
                                     Slider(value: $colorSlider, in: 10...20, step: 0.05)
                                     
-                                    Text("Color Values: \(colorSlider)")
+//                                    Text("Color Values: \(colorSlider)")
                                 }
                             
                                                           
@@ -214,7 +215,7 @@ struct Room: View {
                             
                         }
                         .padding(20)
-                        .frame(width: screen.width - 60, height: 300)
+                        .frame(width: screen.width - 60, height: 350)
                         .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.9892717004, green: 1, blue: 0.9363328815, alpha: 1))]), startPoint: .top, endPoint: .bottom))
                         .clipShape(RoundedRectangle(cornerRadius: 50, style: .continuous))
                         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
@@ -259,8 +260,8 @@ struct Room: View {
                                 
                                 
                                 theColor.color
-                                    .frame(width: 60)
-                                    .frame(height: 60).background(Color.black)
+                                    .frame(width: 50)
+                                    .frame(height: 50).background(Color.black)
                                     .clipShape(RoundedRectangle(cornerRadius: 50, style: .continuous))
                                     .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
                                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
@@ -326,7 +327,7 @@ struct Room: View {
             icon: "meditatePurpleGradient"
         ),
         RoomColor(
-            color: Color(#colorLiteral(red: 0.9886365533, green: 0.9814520478, blue: 0.3510926366, alpha: 1)),
+            color: Color(#colorLiteral(red: 1, green: 0.9485052228, blue: 0, alpha: 1)),
             name: "Yellow | Joy",
             description: "If you're feeling a little down, give the color yellow a try! This cheerful color is known to bring joy and happiness in even the smallest dose.",
             moods: "Cheerful. Enlightened. Humorous. Joyful.",
@@ -334,28 +335,28 @@ struct Room: View {
         ),
         
         RoomColor(
-            color: Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)),
+            color: Color(#colorLiteral(red: 0, green: 0.5095555782, blue: 0, alpha: 1)),
             name: "Green | Balance",
             description: "The color green is a safe, neutral color that's found right in the middle of the spectrum. Green is known to provide a feeling of balance and harmony.",
             moods: "Harmony. Love. Peace. Rejuvenation.  ",
             icon: "meditatePurpleGradient"
         ),
         RoomColor(
-                  color: Color(#colorLiteral(red: 0, green: 0.8653261662, blue: 0.8636087775, alpha: 1)),
+                  color: Color(#colorLiteral(red: 0, green: 0.791148901, blue: 0.7947722077, alpha: 1)),
                   name: "Turquoise | Clarity",
                   description: "Turquoise, a perfect mix of blue & green, is both calming and cheerful to look at. This healing color is known to balance emotions and induce instant calmness.",
                   moods: "Calm. Control. Happy. Stability.  ",
                   icon: "meditatePurpleGradient"
               ),
         RoomColor(
-            color: Color(#colorLiteral(red: 0.1072489247, green: 0.3121216893, blue: 1, alpha: 1)),
+            color: Color(#colorLiteral(red: 0.02745926753, green: 0.07582434267, blue: 0.7992644906, alpha: 1)),
             name: "Blue | Calming",
             description: "For a good reason blue is labeled as the calmest color on Earth. Long known for its serene, cooling effect. Give blue a try if you want to relax.",
             moods: "Appreciative. Calm. Honest. Serenity.",
             icon: "meditatePurpleGradient"
         ),
         RoomColor(
-            color: Color(#colorLiteral(red: 0.331466198, green: 0.1703749895, blue: 0.8207140565, alpha: 1)),
+            color: Color(#colorLiteral(red: 0.1917975843, green: 0.03556161001, blue: 0.5212325454, alpha: 1)),
             name: "Indigo | Wisdom",
             description: "Those seeking wisdom and deep spirituality need look no further than indigo and shades of purple. Use purple to help transcend to a deeper state of mind.",
             moods: "Dignity. Intuition. Maturity. Wisdom.",
@@ -363,7 +364,7 @@ struct Room: View {
         ),
         
         RoomColor(
-            color: Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)),
+            color: Color(#colorLiteral(red: 0.4884164929, green: 0.1471119225, blue: 0.8133198619, alpha: 1)),
             name: "Violet | Imagination",
             description: "Much like indigo, violet is a soft, yet vibrant shade of purple that offers heightened intuition and deep mental relaxation for those who seek it.",
             moods: "Artistic. Imagination. Intuition. Relaxed. ",
@@ -377,14 +378,14 @@ struct Room: View {
             icon: "meditatePurpleGradient"
         ),
         RoomColor(
-            color: Color(#colorLiteral(red: 0.8110381961, green: 0, blue: 0.7638235688, alpha: 1)),
+            color: Color(#colorLiteral(red: 0.4953653812, green: 0, blue: 0.5411412716, alpha: 1)),
             name: "Magenta | Perception",
             description: "If emotional balance and internal wisdom is what you seek, let magenta be your guide.",
             moods: "Balance. Perception. Vision. Wisdom.",
             icon: "meditatePurpleGradient"
         ),
         RoomColor(
-            color: Color(#colorLiteral(red: 1, green: 0.488842916, blue: 0.8082491159, alpha: 1)),
+            color: Color(#colorLiteral(red: 0.7981805205, green: 0, blue: 0.5793473125, alpha: 1)),
             name: "Pink | Compassion",
             description: "Pink is known to stimulate happiness, reduce aggression and even curb hunger with a soft, compassionate vibe that leaves you feeling safe and protected.",
             moods: "Calm. Beauty. Protection. Soft.",

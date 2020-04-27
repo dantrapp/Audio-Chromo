@@ -84,7 +84,7 @@ struct LogoBox: View {
                     .font(.largeTitle)
             }
         }
-        .frame(width: 380)
+        .frame(width: screen.width - 60)
         .frame(height: 300)
         .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
         .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
