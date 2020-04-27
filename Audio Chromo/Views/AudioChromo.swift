@@ -83,13 +83,17 @@ struct LogoBox: View {
                     .foregroundColor(Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
                     .font(.largeTitle)
             }
+            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
+                   .shadow(color: Color.black.opacity(0.4), radius: 40, x: 0, y: 40)
+            
         }
         .frame(width: screen.width - 60)
         .frame(height: 300)
-        .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+        .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.8887498379, green: 0.8614055514, blue: 0.8578141928, alpha: 1))]), startPoint: .top, endPoint: .bottom))
         .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            
         .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
+        .shadow(color: Color.black.opacity(0.4), radius: 40, x: 0, y: 40)
+        
     }
 }
 

@@ -10,7 +10,18 @@
  
  FEATURES & FUNCTIONS
  
-// TIMER FUNCTION
+ // INTAKE QUESTIONS
+ - What Is Your Focus With This Session?
+ - Inner Peace
+ - Oneness
+ - Balance
+ - Calm
+ - Energy
+ - Inspiration
+ - Encouragement
+ 
+ 
+ // TIMER FUNCTION
  
  Start 5:00 Timer (Play Button)
  - Countdown: 5, 4, 3, 2, 1
@@ -25,6 +36,11 @@
  - Stars
  - Circles
  - Oscillating
+ - SINE WAVES
+ 
+ //ENCOURAGING WORDS (Animated In Background)
+ - RELAX
+ - Quotes
  
  //SHARE THIS ROOM
  - Connect with friends
@@ -51,10 +67,10 @@
  
  //STREAKS FUNCTION
  - Log
-    - Consecutive Days
-    - Most Used Room
-    - Most Played Music
-    - Record Of Thoughts
+ - Consecutive Days
+ - Most Used Room
+ - Most Played Music
+ - Record Of Thoughts
  
  
  */
@@ -65,7 +81,7 @@ struct Room: View {
     
     //BUTTON TAPPED
     @State var buttonTapped = false
-
+    
     
     //MAIN COLOR
     @State var chooseColor = Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))
@@ -93,36 +109,58 @@ struct Room: View {
                 ZStack {
                     
                     
-                    //MAIN VIEW COLOR - Default Purple
+                    /* MAIN VIEW COLOR OPTIONAL
+                     - 1st State: Select Color
+                        - All logic after color selected
+                            - Select Background Sounds
+                            - Animated Words
+                     - 2nd State: Color tapped, but not selected.
+                     - 3rd State: Default - Purple
+                    */
                     
-                   
+                    
                     if selectColor {
                         chooseColor
                             .opacity(colorSlider * 0.05)
-                        .edgesIgnoringSafeArea(.all)
+                            .edgesIgnoringSafeArea(.all)
+                        
+                        VStack {
+                            /*
+                             Add Select Sounds Card or Action Here.
+                             */
+                            Text("'Select Sound' Card")
+                            
+                            /*
+                            Add Timer View Here
+                            */
+                            Text("Set Timer View")
+                            
+                            /*
+                             Add Words/Quotes Animation Here
+                             Ideally after Timer has started
+                             */
+                            Text("RELAX (Animated)")
+                            
+                            /*
+                             Queue Background Animations
+                             */
+                            Text("Queue Background Animations")
+                        }
+                        
                     } else if buttonTapped {
                         chooseColor
-                                                .edgesIgnoringSafeArea(.all)
-                        //                    LinearGradient(gradient: Gradient(colors: [
-                        //                        chooseColor.opacity(buttonTapped ? ((colorSlider * 0.25) * 0.25) : 1.0),
-                        //                        chooseColor.opacity(buttonTapped ? ((colorSlider * 0.18) * 0.45) : 0.08),
-                        //                        chooseColor.opacity(buttonTapped ? ((colorSlider + 0.38) * 0.65) : 0.38),
-                        //                        chooseColor.opacity(buttonTapped ? ((colorSlider + 0.18) * 0.15) : 0.18),
-                        //                        Color.white.opacity(0.42)]),
-                        //                                   startPoint: .top, endPoint: .bottom)
-                        //                    .opacity(30)
-                        //
-                                            
-                                            //WORKING SINGLE COLOR SLIDER COLOR CHANGE
-                                                .opacity(colorSlider * 0.05)
+                            .edgesIgnoringSafeArea(.all)
+                            
+                            .opacity(colorSlider * 0.05)
+                        
                     } else {
                         chooseColor
                             .opacity(0.88)
-                        .edgesIgnoringSafeArea(.all)
+                            .edgesIgnoringSafeArea(.all)
                         
                     }
                     
-                   //when color tapped, display color description box
+                    //when color tapped, display color description box
                     
                     if buttonTapped{
                         //display title
@@ -130,7 +168,7 @@ struct Room: View {
                             
                             //ICON + TITLE
                             HStack {
-                            
+                                
                                 Image(self.icon)
                                     .resizable()
                                     .frame(width: 40, height: 40)
@@ -139,14 +177,14 @@ struct Room: View {
                                     .font(.system(size:22))
                                     .fontWeight(.bold)
                             }
-//                            .frame(width: screen.width - 80)
+                            //                            .frame(width: screen.width - 80)
                             //MOODS
-                                                 Text(self.moods)
-                                                     .font(.system(size:12))
-                                                     .fontWeight(.bold).opacity(0.6)
-                                                     .multilineTextAlignment(.leading)
-                                                 
-                        
+                            Text(self.moods)
+                                .font(.system(size:12))
+                                .fontWeight(.bold).opacity(0.6)
+                                .multilineTextAlignment(.leading)
+                            
+                            
                             
                             
                             //DESCRIPTION
@@ -155,10 +193,10 @@ struct Room: View {
                                 .fontWeight(.medium)
                                 .frame(height: 120)
                                 .lineSpacing(2)
-                            .opacity(0.8)
-                                
+                                .opacity(0.8)
                             
-                     
+                            
+                            
                             
                             /*
                              COLOR SLIDER
@@ -166,32 +204,32 @@ struct Room: View {
                              Use drag gesture and percentages (10 / 20) to change opacity
                              */
                             
-                                                     
                             
-                      
-                                VStack {
-                                    
-                                    HStack(alignment: .center) {
-                                                            Image("colorWheel64")
-                                                                .resizable()
-                                                                .frame(width: 30, height: 30)
+                            
+                            
+                            VStack {
+                                
+                                HStack(alignment: .center) {
+                                    Image("colorWheel64")
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
                                     Text("Choose Color Shade")
-                                                         }
-                                                                                           
-                                    
-                                    Slider(value: $colorSlider, in: 10...20, step: 0.05)
-                                    
-//                                    Text("Color Values: \(colorSlider)")
+                                }
                                 
-                            
-                                                          
-                            
-                            
-                            
-                            //START BUTTON
-                                            
                                 
-                               
+                                Slider(value: $colorSlider, in: 10...20, step: 0.05)
+                                
+                                //                                    Text("Color Values: \(colorSlider)")
+                                
+                                
+                                
+                                
+                                
+                                
+                                //START BUTTON
+                                
+                                
+                                
                                 
                                 //SELECT BUTTON
                                 Button(action: {
@@ -199,7 +237,7 @@ struct Room: View {
                                     self.selectColor = true
                                     
                                     //add 5:00 timer
-                                        //5, 4, 3, 2, 1 - START
+                                    //5, 4, 3, 2, 1 - START
                                     
                                     //add pause button
                                     
@@ -212,13 +250,13 @@ struct Room: View {
                                 }) {
                                     //Select Color
                                     Text("Continue")
-                                    .padding(10)
+                                        .padding(10)
                                 }
                                 .frame(width: 150)
-
+                                
                             }
-                                    
-                           
+                            
+                            
                         }
                         .padding(20)
                         .frame(width: screen.width - 60, height: 350)
@@ -260,7 +298,7 @@ struct Room: View {
                                 //button tapped
                                 self.buttonTapped = true
                                 
-                               
+                                
                                 
                             }) {
                                 
@@ -281,7 +319,7 @@ struct Room: View {
                         }
                     }
                 }
-            .padding(6)
+                .padding(6)
                 
             }
         }
@@ -348,12 +386,12 @@ struct Room: View {
             icon: "meditatePurpleGradient"
         ),
         RoomColor(
-                  color: Color(#colorLiteral(red: 0, green: 0.791148901, blue: 0.7947722077, alpha: 1)),
-                  name: "Turquoise | Clarity",
-                  description: "Turquoise, a perfect mix of blue & green, is both calming and cheerful to look at. This healing color is known to balance emotions and induce instant calmness.",
-                  moods: "Calm. Control. Happy. Stability.  ",
-                  icon: "meditatePurpleGradient"
-              ),
+            color: Color(#colorLiteral(red: 0, green: 0.791148901, blue: 0.7947722077, alpha: 1)),
+            name: "Turquoise | Clarity",
+            description: "Turquoise, a perfect mix of blue & green, is both calming and cheerful to look at. This healing color is known to balance emotions and induce instant calmness.",
+            moods: "Calm. Control. Happy. Stability.  ",
+            icon: "meditatePurpleGradient"
+        ),
         RoomColor(
             color: Color(#colorLiteral(red: 0.02745926753, green: 0.07582434267, blue: 0.7992644906, alpha: 1)),
             name: "Blue | Calming",

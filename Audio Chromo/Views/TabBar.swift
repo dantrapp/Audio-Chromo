@@ -22,7 +22,7 @@ struct TabBar: View {
             //COLORS
             Room().tabItem {
                                      Image(systemName: "paintbrush")
-                                     Text("Color")
+                                     Text("Colors")
                                  
                                  }
             
