@@ -126,7 +126,7 @@ struct Room: View {
                     
                     if buttonTapped{
                         //display title
-                        VStack(spacing: 8) {
+                        VStack(alignment: .leading, spacing: 8) {
                             
                             //ICON + TITLE
                             HStack {
@@ -139,6 +139,13 @@ struct Room: View {
                                     .font(.system(size:22))
                                     .fontWeight(.bold)
                             }
+//                            .frame(width: screen.width - 80)
+                            //MOODS
+                                                 Text(self.moods)
+                                                     .font(.system(size:12))
+                                                     .fontWeight(.bold).opacity(0.6)
+                                                     .multilineTextAlignment(.leading)
+                                                 
                         
                             
                             
@@ -151,12 +158,7 @@ struct Room: View {
                             .opacity(0.8)
                                 
                             
-                            //MOODS
-                            Text(self.moods)
-                                .font(.system(size:12))
-                                .fontWeight(.bold).opacity(0.6)
-                                .multilineTextAlignment(.leading)
-                            
+                     
                             
                             /*
                              COLOR SLIDER
@@ -164,26 +166,30 @@ struct Room: View {
                              Use drag gesture and percentages (10 / 20) to change opacity
                              */
                             
+                                                     
+                            
                       
                                 VStack {
+                                    
+                                    HStack(alignment: .center) {
+                                                            Image("colorWheel64")
+                                                                .resizable()
+                                                                .frame(width: 30, height: 30)
+                                    Text("Choose Color Shade")
+                                                         }
+                                                                                           
                                     
                                     Slider(value: $colorSlider, in: 10...20, step: 0.05)
                                     
 //                                    Text("Color Values: \(colorSlider)")
-                                }
+                                
                             
                                                           
                             
                             
                             
                             //START BUTTON
-                            HStack {
-                                Image(systemName: "play.fill")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .font(.system(size: 12, weight: .medium))
-                                    .frame(width: 20, height: 20)
-                                
+                                            
                                 
                                
                                 
@@ -204,15 +210,15 @@ struct Room: View {
                                     //play background music
                                     
                                 }) {
-                                    Text("Select Color")
+                                    //Select Color
+                                    Text("Continue")
+                                    .padding(10)
                                 }
                                 .frame(width: 150)
 
-                                    
-                                    
                             }
-                            .frame(height: 50)
-                            
+                                    
+                           
                         }
                         .padding(20)
                         .frame(width: screen.width - 60, height: 350)

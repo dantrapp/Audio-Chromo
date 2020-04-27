@@ -60,34 +60,41 @@ struct SoundDataStructure : Identifiable {
     var icon : String
     var title : String
     var text : String
+    var soundFile : String
 }
 
 let soundFileData = [
     
     SoundDataStructure(
         icon: "swift",
-        title: "Swift Sound",
-        text: "Listen to the soothing sound of Swift."
+        title: "Forest Birds",
+        text: "Listen to the soothing sound of Swift.",
+        soundFile: "birds.wav"
+
     ),
     SoundDataStructure(
         icon: "swift",
         title: "Swift Sound 2",
-        text: "Listen to the soothing sound of Swift, Again!"
+        text: "Listen to the soothing sound of Swift, Again!",
+        soundFile: "birds.wav"
     ),
     SoundDataStructure(
         icon: "swift",
         title: "Swift Sound 3",
-        text: "Listen to the soothing sound of Swift, Again!"
+        text: "Listen to the soothing sound of Swift, Again!",
+        soundFile: "birds.wav"
     ),
     SoundDataStructure(
         icon: "swift",
         title: "Swift Sound 4",
-        text: "Listen to the soothing sound of Swift, Again!"
+        text: "Listen to the soothing sound of Swift, Again!",
+        soundFile: "birds.wav"
     ),
     SoundDataStructure(
         icon: "swift",
         title: "Swift Sound 5",
-        text: "Listen to the soothing sound of Swift, Again!")
+        text: "Listen to the soothing sound of Swift, Again!",
+        soundFile: "birds.wav")
 ]
 
 
