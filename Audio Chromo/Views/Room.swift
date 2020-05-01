@@ -98,6 +98,12 @@ struct Room: View {
     //SLIDER STATE
     @State var colorSlider : Double = 15
     
+    //GET SOUNDS
+    @State var getSounds = false
+    
+    //SET TIMER
+    @State var setTimer = false
+    
     
     var body: some View {
         
@@ -125,19 +131,11 @@ struct Room: View {
                             .edgesIgnoringSafeArea(.all)
                         
                         VStack {
+                     
+                        
+                          
                             /*
-                             Add Select Sounds Card or Action Here.
-                             */
-                            Text("'Select Sound' Card")
-                            
-                            /*
-                            Add Timer View Here
-                            */
-                            Text("Set Timer View")
-                            
-                            /*
-                             Add Words/Quotes Animation Here
-                             Ideally after Timer has started
+                             Add Words/Quotes After START BUTTON
                              */
                             Text("RELAX (Animated)")
                             
@@ -145,7 +143,43 @@ struct Room: View {
                              Queue Background Animations
                              */
                             Text("Queue Background Animations")
+                            
+                            //GET SOUNDS BUTTON OPEN MODAL (Subview)
+                            Button(action: {
+                                self.getSounds.toggle()
+                                
+                            }) {
+                                
+                                soundModal()
+                                
+                            }
+                            .sheet(isPresented: $getSounds) {
+                                SoundList()
+                            }
+                            
+                            //SET TIMER BUTTON OPEN MODAL (Subview)
+                            Button(action: {
+                                self.setTimer.toggle()
+                                
+                            }) {
+                                
+                                timerModal()
+                                
+                            }
+                            .sheet(isPresented: $setTimer) {
+                                SoundList()
+                            }
+                            
+                            
+                            
+                            //START BUTTON
+                              /*
+                             
+                             Drop color selector and change opacity of tab bar in Room() when start button is pressed to take them out of view.
+                             */
+                          
                         }
+                        
                         
                     } else if buttonTapped {
                         chooseColor
@@ -218,22 +252,18 @@ struct Room: View {
                                 
                                 
                                 Slider(value: $colorSlider, in: 10...20, step: 0.05)
-                                
-                                //                                    Text("Color Values: \(colorSlider)")
-                                
-                                
-                                
-                                
-                                
-                                
-                                //START BUTTON
-                                
+
+                              
                                 
                                 
                                 
                                 //SELECT BUTTON
                                 Button(action: {
+                                    
+                                    //CLOSE CARD
                                     self.buttonTapped = false
+                                    
+                                    //SET CHOSEN COLOR
                                     self.selectColor = true
                                     
                                     //add 5:00 timer
@@ -254,10 +284,15 @@ struct Room: View {
                                 }
                                 .frame(width: 150)
                                 
+                               
+                                
                             }
+                           
                             
                             
                         }
+                            
+                            
                         .padding(20)
                         .frame(width: screen.width - 60, height: 350)
                         .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.9892717004, green: 1, blue: 0.9363328815, alpha: 1))]), startPoint: .top, endPoint: .bottom))
@@ -266,9 +301,14 @@ struct Room: View {
                         .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
                         .shadow(color: Color.black.opacity(0.3), radius: 30, x: 0, y: 30)
                         
+                        
                     }
                     
+                    
+                    
                 }
+                    //works
+                    .animation(.linear)
                 
                 
                 //choose color
@@ -316,13 +356,20 @@ struct Room: View {
                                 //set color picker frame height
                                 .frame(height: 70)
                             
+                            
                         }
+                        
                     }
+                    
                 }
                 .padding(6)
                 
+                
             }
+//            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+                
         }
+        
     }
     
     
@@ -443,6 +490,44 @@ struct Room: View {
     struct Room_Previews: PreviewProvider {
         static var previews: some View {
             Room()
+        }
+    }
+}
+
+struct soundModal: View {
+    var body: some View {
+        VStack {
+            
+            Image(systemName: "headphones")
+                .renderingMode(.original)
+                .font(.system(size: 16, weight: .medium))
+                .frame(width: 36, height: 36)
+                .background(Color.white)
+                //add clipShape before shadow
+                .clipShape(Circle())
+                //add double drop shadow
+                .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+            Text("Get Background Music")
+        }
+    }
+}
+
+struct timerModal: View {
+    var body: some View {
+        VStack {
+            
+            Image(systemName: "clock")
+                .renderingMode(.original)
+                .font(.system(size: 16, weight: .medium))
+                .frame(width: 36, height: 36)
+                .background(Color.white)
+                //add clipShape before shadow
+                .clipShape(Circle())
+                //add double drop shadow
+                .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+            Text("Set A Timer")
         }
     }
 }

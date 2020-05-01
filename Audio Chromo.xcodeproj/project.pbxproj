@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		716BF5872457DEA100CDEF1B /* TimerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716BF5862457DEA100CDEF1B /* TimerTest.swift */; };
 		7177B852245249D900B1651F /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B7EA245249D500B1651F /* Lato-Italic.ttf */; };
 		7177B853245249D900B1651F /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B7EB245249D500B1651F /* Lato-LightItalic.ttf */; };
 		7177B854245249D900B1651F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B7EC245249D500B1651F /* Lato-Thin.ttf */; };
@@ -32,6 +33,7 @@
 		7177B89D245249D900B1651F /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B83C245249D800B1651F /* Roboto-Thin.ttf */; };
 		7177B89E245249D900B1651F /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B83D245249D800B1651F /* Roboto-Black.ttf */; };
 		7177B8A9245258B100B1651F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7177B8A8245258B100B1651F /* Modifiers.swift */; };
+		7181E440245799B2007E3FE9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7181E43F245799B2007E3FE9 /* TimerView.swift */; };
 		718A938E244B84BE0044B845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A938D244B84BE0044B845 /* AppDelegate.swift */; };
 		718A9390244B84BE0044B845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A938F244B84BE0044B845 /* SceneDelegate.swift */; };
 		718A9393244B84BE0044B845 /* Audio_Chromo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 718A9391244B84BE0044B845 /* Audio_Chromo.xcdatamodeld */; };
@@ -49,6 +51,7 @@
 		71DC81E0244FD13F00883D06 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC81DF244FD13F00883D06 /* TabBar.swift */; };
 		71DFDA3C2455FD1E008C093A /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DFDA3B2455FD1E008C093A /* MediaPlayer.swift */; };
 		71DFDA3E2455FD37008C093A /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DFDA3D2455FD37008C093A /* Mixer.swift */; };
+		71F38E07245BCC930088E101 /* AnimatedBackgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F38E06245BCC930088E101 /* AnimatedBackgrounds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		716BF5862457DEA100CDEF1B /* TimerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTest.swift; sourceTree = "<group>"; };
 		7177B7EA245249D500B1651F /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		7177B7EB245249D500B1651F /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		7177B7EC245249D500B1651F /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		7177B83C245249D800B1651F /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		7177B83D245249D800B1651F /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		7177B8A8245258B100B1651F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		7181E43F245799B2007E3FE9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		718A938A244B84BE0044B845 /* Audio Chromo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Chromo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		718A938D244B84BE0044B845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		718A938F244B84BE0044B845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +122,7 @@
 		71DC81DF244FD13F00883D06 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		71DFDA3B2455FD1E008C093A /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		71DFDA3D2455FD37008C093A /* Mixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mixer.swift; sourceTree = "<group>"; };
+		71F38E06245BCC930088E101 /* AnimatedBackgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBackgrounds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +264,9 @@
 				71AEE6DA2454F5F000F7C904 /* SoundList.swift */,
 				71AEE6DE24551BC100F7C904 /* SoundDetail.swift */,
 				71DC81DF244FD13F00883D06 /* TabBar.swift */,
+				7181E43F245799B2007E3FE9 /* TimerView.swift */,
+				716BF5862457DEA100CDEF1B /* TimerTest.swift */,
+				71F38E06245BCC930088E101 /* AnimatedBackgrounds.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				718A938E244B84BE0044B845 /* AppDelegate.swift in Sources */,
+				716BF5872457DEA100CDEF1B /* TimerTest.swift in Sources */,
 				71DFDA3E2455FD37008C093A /* Mixer.swift in Sources */,
 				718A9390244B84BE0044B845 /* SceneDelegate.swift in Sources */,
 				718A93CA244B858C0044B845 /* AudioChromo.swift in Sources */,
@@ -426,6 +436,8 @@
 				71DFDA3C2455FD1E008C093A /* MediaPlayer.swift in Sources */,
 				71AEE6DF24551BC100F7C904 /* SoundDetail.swift in Sources */,
 				7177B8A9245258B100B1651F /* Modifiers.swift in Sources */,
+				71F38E07245BCC930088E101 /* AnimatedBackgrounds.swift in Sources */,
+				7181E440245799B2007E3FE9 /* TimerView.swift in Sources */,
 				71AEE6DB2454F5F000F7C904 /* SoundList.swift in Sources */,
 				718A9395244B84BE0044B845 /* ContentView.swift in Sources */,
 				718A9393244B84BE0044B845 /* Audio_Chromo.xcdatamodeld in Sources */,

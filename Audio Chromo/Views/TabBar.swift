@@ -43,6 +43,8 @@ struct TabBar: View {
         
           
         }
+        //Change opacity of tab bar in Room() when start button is pressed
+        //.opacity(self.startButton ? 0.01 : 1)
     }
 }
 
