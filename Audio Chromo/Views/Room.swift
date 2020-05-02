@@ -82,6 +82,12 @@ struct Room: View {
     //BUTTON TAPPED
     @State var buttonTapped = false
     
+    //BUTTON TAPPED
+    @State var startButton = false
+    
+    //START BUTTON CARD
+    @State var showStartButtonCard = false
+    
     
     //MAIN COLOR
     @State var chooseColor = Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))
@@ -124,61 +130,32 @@ struct Room: View {
                      - 3rd State: Default - Purple
                     */
                     
+                   
+               
                     
                     if selectColor {
-                        chooseColor
-                            .opacity(colorSlider * 0.05)
+                        
+                        //use another conditional to add background animation after start button is pressed
+                        
+                        
+                        
+                             chooseColor.opacity(colorSlider * 0.05)
                             .edgesIgnoringSafeArea(.all)
                         
-                        VStack {
-                     
                         
-                          
-                            /*
-                             Add Words/Quotes After START BUTTON
-                             */
-                            Text("RELAX (Animated)")
+                        if startButton {
                             
-                            /*
-                             Queue Background Animations
-                             */
-                            Text("Queue Background Animations")
+                            //drop screen elements & start animation
+                            chooseColor.opacity(colorSlider * 0.05)
+                            .background(StarsBackground())
+                            .edgesIgnoringSafeArea(.all)
                             
-                            //GET SOUNDS BUTTON OPEN MODAL (Subview)
-                            Button(action: {
-                                self.getSounds.toggle()
-                                
-                            }) {
-                                
-                                soundModal()
-                                
-                            }
-                            .sheet(isPresented: $getSounds) {
-                                SoundList()
-                            }
-                            
-                            //SET TIMER BUTTON OPEN MODAL (Subview)
-                            Button(action: {
-                                self.setTimer.toggle()
-                                
-                            }) {
-                                
-                                timerModal()
-                                
-                            }
-                            .sheet(isPresented: $setTimer) {
-                                SoundList()
-                            }
-                            
-                            
-                            
-                            //START BUTTON
-                              /*
-                             
-                             Drop color selector and change opacity of tab bar in Room() when start button is pressed to take them out of view.
-                             */
-                          
+                        } else {
+                            //show start button card
+                            StartButtonCard(getSounds: $getSounds, setTimer: $setTimer, startButton: $startButton)
                         }
+                        
+                        
                         
                         
                     } else if buttonTapped {
@@ -193,6 +170,8 @@ struct Room: View {
                             .edgesIgnoringSafeArea(.all)
                         
                     }
+                    
+                  
                     
                     //when color tapped, display color description box
                     
@@ -257,7 +236,7 @@ struct Room: View {
                                 
                                 
                                 
-                                //SELECT BUTTON
+                                //SELECT/CONTINUE BUTTON
                                 Button(action: {
                                     
                                     //CLOSE CARD
@@ -309,7 +288,8 @@ struct Room: View {
                 }
                     //works
                     .animation(.linear)
-                
+            
+               
                 
                 //choose color
                 ScrollView(.horizontal, showsIndicators: false)  {
@@ -528,6 +508,75 @@ struct timerModal: View {
                 .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
             Text("Set A Timer")
+        }
+    }
+}
+
+struct StartButtonCard: View {
+    //GET SOUNDS
+    @Binding var getSounds : Bool
+    @Binding var setTimer : Bool
+    @Binding var startButton : Bool
+    
+    var body: some View {
+        VStack {
+            
+            
+            
+            
+            /*
+             Add Words/Quotes After START BUTTON
+             */
+            Text("RELAX (Animated)")
+            
+            /*
+             Queue Background Animations
+             */
+            Text("Queue Background Animations")
+            
+            //GET SOUNDS BUTTON OPEN MODAL (Subview)
+            Button(action: {
+                self.getSounds.toggle()
+                
+            }) {
+                
+                soundModal()
+                
+            }
+            .sheet(isPresented: $getSounds) {
+                SoundList()
+            }
+            
+            //SET TIMER BUTTON OPEN MODAL (Subview)
+            Button(action: {
+                self.setTimer.toggle()
+                
+            }) {
+                
+                timerModal()
+                
+            }
+            .sheet(isPresented: $setTimer) {
+                SoundList()
+            }
+            
+            
+            
+            //START BUTTON
+            /*
+             
+             Drop color selector and change opacity of tab bar in Room() when start button is pressed to take them out of view.
+             */
+            
+            Button(action: {
+                self.startButton.toggle()
+                
+            }) {
+                Text("Start")
+                
+            }
+            
+            
         }
     }
 }
