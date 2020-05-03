@@ -37,6 +37,7 @@ struct StarsBackground: View{
                 HStack(spacing: 0.0) {
                     ForEach(0 ..< self.itemsPerRow) { item in
                         Image(systemName: "moon.circle")
+                            .foregroundColor(Color.white)
                             .frame(width: screen.width / CGFloat(self.itemsPerRow),height: screen.width / CGFloat(self.itemsPerRow))
                             
                             /*
@@ -49,7 +50,7 @@ struct StarsBackground: View{
                              set delay modifier to a random range of doubles.
                              */
     
-                            .opacity(self.showStar ? 0.8 : 0.0)
+                            .opacity(self.showStar ? 1 : 0.0)
                             
                             .animation(
                                 Animation

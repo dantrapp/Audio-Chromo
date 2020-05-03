@@ -85,10 +85,9 @@ struct Room: View {
     //BUTTON TAPPED
     @State var startButton = false
     
-    //START BUTTON CARD
-    @State var showStartButtonCard = false
-    
-    
+//    //START BUTTON CARD
+    @State var colorBox = false
+
     //MAIN COLOR
     @State var chooseColor = Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))
     
@@ -120,58 +119,39 @@ struct Room: View {
                 //color view
                 ZStack {
                     
-                    
-                    /* MAIN VIEW COLOR OPTIONAL
-                     - 1st State: Select Color
-                        - All logic after color selected
-                            - Select Background Sounds
-                            - Animated Words
-                     - 2nd State: Color tapped, but not selected.
-                     - 3rd State: Default - Purple
-                    */
-                    
-                   
-               
-                    
                     if selectColor {
-                        
-                        //use another conditional to add background animation after start button is pressed
-                        
-                        
-                        
-                             chooseColor.opacity(colorSlider * 0.05)
+                        chooseColor.opacity(colorSlider * 0.05)
                             .edgesIgnoringSafeArea(.all)
-                        
                         
                         if startButton {
                             
                             //drop screen elements & start animation
                             chooseColor.opacity(colorSlider * 0.05)
-                            .background(StarsBackground())
-                            .edgesIgnoringSafeArea(.all)
-                            
+                                .background(StarsBackground())
+                                .edgesIgnoringSafeArea(.all)
+                              
                         } else {
-                            //show start button card
+                            
                             StartButtonCard(getSounds: $getSounds, setTimer: $setTimer, startButton: $startButton)
                         }
-                        
-                        
-                        
-                        
+    
                     } else if buttonTapped {
+                        //color slider changes color
+                
                         chooseColor
                             .edgesIgnoringSafeArea(.all)
                             
                             .opacity(colorSlider * 0.05)
                         
                     } else {
+                       //purple screen
+                        
                         chooseColor
                             .opacity(0.88)
                             .edgesIgnoringSafeArea(.all)
                         
                     }
-                    
-                  
+
                     
                     //when color tapped, display color description box
                     
@@ -190,7 +170,7 @@ struct Room: View {
                                     .font(.system(size:22))
                                     .fontWeight(.bold)
                             }
-                            //                            .frame(width: screen.width - 80)
+                         
                             //MOODS
                             Text(self.moods)
                                 .font(.system(size:12))
@@ -216,9 +196,6 @@ struct Room: View {
                              Change hue from -dark to +light
                              Use drag gesture and percentages (10 / 20) to change opacity
                              */
-                            
-                            
-                            
                             
                             VStack {
                                 
@@ -262,16 +239,9 @@ struct Room: View {
                                         .padding(10)
                                 }
                                 .frame(width: 150)
-                                
-                               
-                                
                             }
-                           
-                            
                             
                         }
-                            
-                            
                         .padding(20)
                         .frame(width: screen.width - 60, height: 350)
                         .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.9892717004, green: 1, blue: 0.9363328815, alpha: 1))]), startPoint: .top, endPoint: .bottom))
@@ -282,72 +252,85 @@ struct Room: View {
                         
                         
                     }
-                    
-                    
-                    
+                     
                 }
                     //works
                     .animation(.linear)
             
                
                 
-                //choose color
-                ScrollView(.horizontal, showsIndicators: false)  {
-                    HStack {
-                        ForEach(colorArray) {
-                            theColor in
-                            
-                            Button(action: {
+                //use state to make this a tab/icon that pops out the color bar so it can be easily hidden
+                /*
+                 use offset to push it offscreen, or animation
+                 */
+                //choose color (scroll view)
+                
+                
+                if !startButton {
+                    ScrollView(.horizontal, showsIndicators: false)  {
+                        HStack {
+                            ForEach(colorArray) {
+                                theColor in
                                 
-                                //set color
-                                self.chooseColor = theColor.color.opacity(0.88)
-                                
-                                //set title
-                                self.title = theColor.name
-                                
-                                //set description
-                                self.description = theColor.description
-                                
-                                //set moods
-                                self.moods = theColor.moods
-                                
-                                //set icon
-                                self.icon = theColor.icon
-                                
-                                
-                                //button tapped
-                                self.buttonTapped = true
-                                
-                                
-                                
-                            }) {
-                                
-                                
-                                theColor.color
-                                    .frame(width: 50)
-                                    .frame(height: 50).background(Color.black)
-                                    .clipShape(RoundedRectangle(cornerRadius: 50, style: .continuous))
-                                    .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
-                                
+                                Button(action: {
+                                    
+                                    //set color
+                                    self.chooseColor = theColor.color.opacity(0.88)
+                                    
+                                    //set title
+                                    self.title = theColor.name
+                                    
+                                    //set description
+                                    self.description = theColor.description
+                                    
+                                    //set moods
+                                    self.moods = theColor.moods
+                                    
+                                    //set icon
+                                    self.icon = theColor.icon
+                                    
+                                    //button tapped
+                                    self.buttonTapped = true
+                                    
+                                }) {
+                                    
+                                    
+                                    theColor.color
+                                        .frame(width: 50)
+                                        .frame(height: 50).background(Color.black)
+                                        .clipShape(RoundedRectangle(cornerRadius: 50, style: .continuous))
+                                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                                    
+                                    
+                                    
+                                }
+                                    //set color picker frame height
+                                    .frame(height: 70)
                                 
                                 
                             }
-                                //set color picker frame height
-                                .frame(height: 70)
-                            
                             
                         }
                         
                     }
+                    .padding(6)
+                    
+                } else {
+                    Button(action: {
+                        self.startButton = false
+                        
+                    }) {
+                        Image("colorWheel64")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                            //.offset(x:150, y:-40)
+                    }
                     
                 }
-                .padding(6)
                 
                 
             }
-//            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
-                
         }
         
     }
@@ -382,7 +365,7 @@ struct Room: View {
     }
     
     //create object array of colors and names
-    let colorArray = [
+    @State var colorArray = [
         RoomColor(
             color: Color(#colorLiteral(red: 0.8102983236, green: 0, blue: 0, alpha: 1)),
             name: "Red | Passion",
