@@ -118,9 +118,15 @@ struct Room: View {
                 
                 //color view
                 ZStack {
+                
                     
                     if selectColor {
-                        chooseColor.opacity(colorSlider * 0.05)
+                        
+                        //colorSlider Screen + Main screen overlay
+                    Text("\(colorSlider)")
+                        .font(.title).bold()
+                        
+            chooseColor.opacity(colorSlider * 0.05)
                             .edgesIgnoringSafeArea(.all)
                         
                         if startButton {
@@ -132,28 +138,38 @@ struct Room: View {
                               
                         } else {
                             
-                            StartButtonCard(getSounds: $getSounds, setTimer: $setTimer, startButton: $startButton)
-                        }
+                            //this isn't passing color slider values
+                        
+     
+                                StartButtonCard(getSounds: $getSounds, setTimer: $setTimer, startButton: $startButton, colorSlider: $colorSlider)
+                            }
+                        
     
                     } else if buttonTapped {
                         //color slider changes color
-                
+                   
                         chooseColor
-                            .edgesIgnoringSafeArea(.all)
-                            
                             .opacity(colorSlider * 0.05)
+                            
+                            .edgesIgnoringSafeArea(.all)
+                        
+                        
                         
                     } else {
                        //purple screen
                         
-                        chooseColor
-                            .opacity(0.88)
-                            .edgesIgnoringSafeArea(.all)
+                        VStack {
+                            Text("Choose Your Room Color")
+                                .font(.system(size: 24)).bold()
+                            chooseColor
+                                .opacity(0.88)
+                                .edgesIgnoringSafeArea(.all)
+                        }
                         
                     }
 
                     
-                    //when color tapped, display color description box
+                    //when color tapped, display color description box with color slider
                     
                     if buttonTapped{
                         //display title
@@ -213,7 +229,7 @@ struct Room: View {
                                 
                                 
                                 
-                                //SELECT/CONTINUE BUTTON
+                                //selectColor: CONTINUE BUTTON
                                 Button(action: {
                                     
                                     //CLOSE CARD
@@ -221,7 +237,7 @@ struct Room: View {
                                     
                                     //SET CHOSEN COLOR
                                     self.selectColor = true
-                                    
+                               
                                     //add 5:00 timer
                                     //5, 4, 3, 2, 1 - START
                                     
@@ -266,7 +282,7 @@ struct Room: View {
                 //choose color (scroll view)
                 
                 
-                if !startButton {
+//                if !startButton {
                     ScrollView(.horizontal, showsIndicators: false)  {
                         HStack {
                             ForEach(colorArray) {
@@ -316,18 +332,18 @@ struct Room: View {
                     }
                     .padding(6)
                     
-                } else {
-                    Button(action: {
-                        self.startButton = false
-                        
-                    }) {
-                        Image("colorWheel64")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                            //.offset(x:150, y:-40)
-                    }
-                    
-                }
+//                } else {
+//                    Button(action: {
+//                        self.startButton = false
+//
+//                    }) {
+//                        Image("colorWheel64")
+//                        .resizable()
+//                        .frame(width: 30, height: 30)
+//                            //.offset(x:150, y:-40)
+//                    }
+//
+//                }
                 
                 
             }
@@ -495,71 +511,3 @@ struct timerModal: View {
     }
 }
 
-struct StartButtonCard: View {
-    //GET SOUNDS
-    @Binding var getSounds : Bool
-    @Binding var setTimer : Bool
-    @Binding var startButton : Bool
-    
-    var body: some View {
-        VStack {
-            
-            
-            
-            
-            /*
-             Add Words/Quotes After START BUTTON
-             */
-            Text("RELAX (Animated)")
-            
-            /*
-             Queue Background Animations
-             */
-            Text("Queue Background Animations")
-            
-            //GET SOUNDS BUTTON OPEN MODAL (Subview)
-            Button(action: {
-                self.getSounds.toggle()
-                
-            }) {
-                
-                soundModal()
-                
-            }
-            .sheet(isPresented: $getSounds) {
-                SoundList()
-            }
-            
-            //SET TIMER BUTTON OPEN MODAL (Subview)
-            Button(action: {
-                self.setTimer.toggle()
-                
-            }) {
-                
-                timerModal()
-                
-            }
-            .sheet(isPresented: $setTimer) {
-                SoundList()
-            }
-            
-            
-            
-            //START BUTTON
-            /*
-             
-             Drop color selector and change opacity of tab bar in Room() when start button is pressed to take them out of view.
-             */
-            
-            Button(action: {
-                self.startButton.toggle()
-                
-            }) {
-                Text("Start")
-                
-            }
-            
-            
-        }
-    }
-}

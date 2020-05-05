@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		714123212460EEBB0026B3D9 /* StartButtonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714123202460EEBB0026B3D9 /* StartButtonCard.swift */; };
 		716BF5872457DEA100CDEF1B /* TimerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716BF5862457DEA100CDEF1B /* TimerTest.swift */; };
 		7177B852245249D900B1651F /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B7EA245249D500B1651F /* Lato-Italic.ttf */; };
 		7177B853245249D900B1651F /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B7EB245249D500B1651F /* Lato-LightItalic.ttf */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		714123202460EEBB0026B3D9 /* StartButtonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonCard.swift; sourceTree = "<group>"; };
 		716BF5862457DEA100CDEF1B /* TimerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTest.swift; sourceTree = "<group>"; };
 		7177B7EA245249D500B1651F /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		7177B7EB245249D500B1651F /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				7181E43F245799B2007E3FE9 /* TimerView.swift */,
 				716BF5862457DEA100CDEF1B /* TimerTest.swift */,
 				71F38E06245BCC930088E101 /* AnimatedBackgrounds.swift */,
+				714123202460EEBB0026B3D9 /* StartButtonCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				71DFDA3C2455FD1E008C093A /* MediaPlayer.swift in Sources */,
 				71AEE6DF24551BC100F7C904 /* SoundDetail.swift in Sources */,
 				7177B8A9245258B100B1651F /* Modifiers.swift in Sources */,
+				714123212460EEBB0026B3D9 /* StartButtonCard.swift in Sources */,
 				71F38E07245BCC930088E101 /* AnimatedBackgrounds.swift in Sources */,
 				7181E440245799B2007E3FE9 /* TimerView.swift in Sources */,
 				71AEE6DB2454F5F000F7C904 /* SoundList.swift in Sources */,
