@@ -290,7 +290,7 @@ struct Room: View {
                                 
                                 Button(action: {
                                     
-                                    //set color
+                                    //set color:
                                     self.chooseColor = theColor.color.opacity(0.88)
                                     
                                     //set title
