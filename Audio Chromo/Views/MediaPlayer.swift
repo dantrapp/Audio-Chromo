@@ -19,6 +19,7 @@ MEDIA PLAYER
 ***/
 
 import SwiftUI
+import AVKit
 
 struct MediaPlayer: View {
     
@@ -27,6 +28,8 @@ struct MediaPlayer: View {
     
     var soundTitle : String
     var soundIcon : String
+    
+    @State var audioplayer : AVAudioPlayer!
     
     var body: some View {
         
@@ -81,14 +84,26 @@ struct MediaPlayer: View {
                 
                 HStack(alignment: .center, spacing: 20.0){
                     
+                    Button(action: {
+                        //all of the play logic here
+                        //
+                        self.audioplayer.play()
+                       
+                    }) {
+                         Image(systemName: "play.fill")
+                                               .font(.system(size: 50))
+                                           .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
+                    }
+                   
+                    Button(action: {
+                        self.audioplayer.pause()
+                }
+                    ) {
+                        Image(systemName: "pause.fill")
+                          .font(.system(size: 50))
+                        .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
+                    }
                     
-                    Image(systemName: "play.fill")
-                        .font(.system(size: 50))
-                    .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
-                    
-                    Image(systemName: "pause.fill")
-                    .font(.system(size: 50))
-                  .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
                     
                 }
                 .padding(.top, 20)
@@ -96,6 +111,10 @@ struct MediaPlayer: View {
             }
             Spacer() //push MediaPlayer Data to top of card
          
+        }
+        .onAppear{
+        let sound = Bundle.main.path(forResource: "rainforest1", ofType: "mp3")
+            self.audioplayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         }
         .frame(width: screen.width - 60)
                      .frame(height: 300)

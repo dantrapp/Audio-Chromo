@@ -38,6 +38,9 @@
  - Oscillating
  - SINE WAVES
  
+ //RELAXATION TIPS
+ - show a relaxation tip for 5 seconds as the Timer countsdown to start.
+ 
  //ENCOURAGING WORDS (Animated In Background)
  - RELAX
  - Quotes

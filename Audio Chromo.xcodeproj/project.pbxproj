@@ -49,6 +49,7 @@
 		71AEE6DB2454F5F000F7C904 /* SoundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AEE6DA2454F5F000F7C904 /* SoundList.swift */; };
 		71AEE6DD2454F65E00F7C904 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AEE6DC2454F65E00F7C904 /* Favorites.swift */; };
 		71AEE6DF24551BC100F7C904 /* SoundDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AEE6DE24551BC100F7C904 /* SoundDetail.swift */; };
+		71D8665C2462634D004C8EBF /* rainforest1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 71D8665B2462634D004C8EBF /* rainforest1.mp3 */; };
 		71DC81E0244FD13F00883D06 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC81DF244FD13F00883D06 /* TabBar.swift */; };
 		71DFDA3C2455FD1E008C093A /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DFDA3B2455FD1E008C093A /* MediaPlayer.swift */; };
 		71DFDA3E2455FD37008C093A /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DFDA3D2455FD37008C093A /* Mixer.swift */; };
@@ -121,6 +122,7 @@
 		71AEE6DA2454F5F000F7C904 /* SoundList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundList.swift; sourceTree = "<group>"; };
 		71AEE6DC2454F65E00F7C904 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		71AEE6DE24551BC100F7C904 /* SoundDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDetail.swift; sourceTree = "<group>"; };
+		71D8665B2462634D004C8EBF /* rainforest1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rainforest1.mp3; sourceTree = "<group>"; };
 		71DC81DF244FD13F00883D06 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		71DFDA3B2455FD1E008C093A /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		71DFDA3D2455FD37008C093A /* Mixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mixer.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		718A938C244B84BE0044B845 /* Audio Chromo */ = {
 			isa = PBXGroup;
 			children = (
+				71D8665A246262FD004C8EBF /* Sounds */,
 				718A938D244B84BE0044B845 /* AppDelegate.swift */,
 				718A938F244B84BE0044B845 /* SceneDelegate.swift */,
 				718A9394244B84BE0044B845 /* ContentView.swift */,
@@ -272,6 +275,14 @@
 				714123202460EEBB0026B3D9 /* StartButtonCard.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		71D8665A246262FD004C8EBF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				71D8665B2462634D004C8EBF /* rainforest1.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +396,7 @@
 				7177B895245249D900B1651F /* Roboto-MediumItalic.ttf in Resources */,
 				7177B853245249D900B1651F /* Lato-LightItalic.ttf in Resources */,
 				7177B857245249D900B1651F /* Lato-Regular.ttf in Resources */,
+				71D8665C2462634D004C8EBF /* rainforest1.mp3 in Resources */,
 				7177B897245249D900B1651F /* Roboto-BoldItalic.ttf in Resources */,
 				7177B85B245249D900B1651F /* Lato-Light.ttf in Resources */,
 				718A939D244B84BE0044B845 /* LaunchScreen.storyboard in Resources */,
