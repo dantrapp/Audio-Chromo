@@ -29,8 +29,11 @@ struct MediaPlayer: View {
     var soundTitle : String
     var soundIcon : String
     
-    @State var audioplayer : AVAudioPlayer!
+    var soundFile : String
+    var soundFileType: String
     
+    @State var audioplayer : AVAudioPlayer!
+
     var body: some View {
         
         VStack {
@@ -113,8 +116,8 @@ struct MediaPlayer: View {
          
         }
         .onAppear{
-        let sound = Bundle.main.path(forResource: "rainforest1", ofType: "mp3")
-            self.audioplayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+            let playSound = Bundle.main.path(forResource: self.soundFile, ofType: self.soundFileType)
+            self.audioplayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: playSound!))
         }
         .frame(width: screen.width - 60)
                      .frame(height: 300)
@@ -128,6 +131,6 @@ struct MediaPlayer: View {
 
 struct MediaPlayer_Previews: PreviewProvider {
     static var previews: some View {
-        MediaPlayer(soundTitle: "Swift", soundIcon: "swift")
+        MediaPlayer(soundTitle: "Swift", soundIcon: "swift", soundFile: "rainforest1", soundFileType: "mp3")
     }
 }

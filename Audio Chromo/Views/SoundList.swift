@@ -61,40 +61,63 @@ struct SoundDataStructure : Identifiable {
     var title : String
     var text : String
     var soundFile : String
+    var soundFileType : String
 }
 
 let soundFileData = [
     
     SoundDataStructure(
         icon: "swift",
-        title: "Forest Birds",
-        text: "Listen to the soothing sound of Swift.",
-        soundFile: "birds.wav"
+        title: "Rainforest & Thunderstorm",
+        text: "Listen to the soothing sound of the rainforest & a thunderstorm.",
+        soundFile: "rainforest1",
+        soundFileType: "mp3"
+
+    ),
+     SoundDataStructure(
+        icon: "swift",
+        title: "Crackling Fire",
+        text: "Listen to the soothing sound of a crackling fire",
+        soundFile: "cracklingFire1",
+        soundFileType: "wav"
+
+    ),
+      SoundDataStructure(
+        icon: "swift",
+        title: "Lake Waves",
+        text: "Listen to lake waves lapping gently against the shore",
+        soundFile: "lakeWaves",
+        soundFileType: "wav"
 
     ),
     SoundDataStructure(
-        icon: "swift",
-        title: "Swift Sound 2",
-        text: "Listen to the soothing sound of Swift, Again!",
-        soundFile: "birds.wav"
-    ),
+         icon: "swift",
+         title: "Waterfall",
+         text: "Listen to a waterfall and a slow moving creek",
+         soundFile: "waterfall2",
+         soundFileType: "wav"
+
+     ),
     SoundDataStructure(
         icon: "swift",
-        title: "Swift Sound 3",
-        text: "Listen to the soothing sound of Swift, Again!",
-        soundFile: "birds.wav"
-    ),
-    SoundDataStructure(
-        icon: "swift",
-        title: "Swift Sound 4",
-        text: "Listen to the soothing sound of Swift, Again!",
-        soundFile: "birds.wav"
-    ),
-    SoundDataStructure(
-        icon: "swift",
-        title: "Swift Sound 5",
-        text: "Listen to the soothing sound of Swift, Again!",
-        soundFile: "birds.wav")
+        title: "Owl",
+         text: "Listen to a Great Horned Owl hoot in the night.",
+        soundFile: "owl1",
+        soundFileType: "wav"
+        
+),
+    
+    
+SoundDataStructure(
+    icon: "swift",
+    title: "Vacuum Cleaner",
+     text: "Listen to a vacuum cleaner.",
+    soundFile: "vacuumCleaner1",
+    soundFileType: "wav"
+    
+    
+    
+    )
 ]
 
 

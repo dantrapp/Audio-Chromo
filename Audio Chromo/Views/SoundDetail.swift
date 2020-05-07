@@ -24,7 +24,8 @@ struct SoundDetail: View {
             VStack {
              
                 
-                MediaPlayer(soundTitle: soundfiles.title, soundIcon: soundfiles.icon)
+                MediaPlayer(soundTitle: soundfiles.title, soundIcon: soundfiles.icon, soundFile: soundfiles.soundFile, soundFileType: soundfiles.soundFileType)
+                
                 Spacer()
             }
             .padding(.top, 30)

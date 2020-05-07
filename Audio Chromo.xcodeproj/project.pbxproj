@@ -34,6 +34,11 @@
 		7177B89D245249D900B1651F /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B83C245249D800B1651F /* Roboto-Thin.ttf */; };
 		7177B89E245249D900B1651F /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7177B83D245249D800B1651F /* Roboto-Black.ttf */; };
 		7177B8A9245258B100B1651F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7177B8A8245258B100B1651F /* Modifiers.swift */; };
+		717E6D4C2463BB3D00484CB9 /* lakeWaves.wav in Resources */ = {isa = PBXBuildFile; fileRef = 717E6D4B2463BB3D00484CB9 /* lakeWaves.wav */; };
+		717E6D502463BBF800484CB9 /* waterfall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 717E6D4E2463BBF800484CB9 /* waterfall2.wav */; };
+		717E6D522463BC8B00484CB9 /* cracklingFire1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 717E6D512463BC8B00484CB9 /* cracklingFire1.wav */; };
+		717E6D542463BE0300484CB9 /* owl1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 717E6D532463BE0300484CB9 /* owl1.wav */; };
+		717E6D562463BE4000484CB9 /* vacuumCleaner1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 717E6D552463BE4000484CB9 /* vacuumCleaner1.wav */; };
 		7181E440245799B2007E3FE9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7181E43F245799B2007E3FE9 /* TimerView.swift */; };
 		718A938E244B84BE0044B845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A938D244B84BE0044B845 /* AppDelegate.swift */; };
 		718A9390244B84BE0044B845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A938F244B84BE0044B845 /* SceneDelegate.swift */; };
@@ -101,6 +106,11 @@
 		7177B83C245249D800B1651F /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		7177B83D245249D800B1651F /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		7177B8A8245258B100B1651F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		717E6D4B2463BB3D00484CB9 /* lakeWaves.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lakeWaves.wav; sourceTree = "<group>"; };
+		717E6D4E2463BBF800484CB9 /* waterfall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = waterfall2.wav; sourceTree = "<group>"; };
+		717E6D512463BC8B00484CB9 /* cracklingFire1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cracklingFire1.wav; sourceTree = "<group>"; };
+		717E6D532463BE0300484CB9 /* owl1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = owl1.wav; sourceTree = "<group>"; };
+		717E6D552463BE4000484CB9 /* vacuumCleaner1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = vacuumCleaner1.wav; sourceTree = "<group>"; };
 		7181E43F245799B2007E3FE9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		718A938A244B84BE0044B845 /* Audio Chromo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Chromo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		718A938D244B84BE0044B845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +291,11 @@
 			isa = PBXGroup;
 			children = (
 				71D8665B2462634D004C8EBF /* rainforest1.mp3 */,
+				717E6D4B2463BB3D00484CB9 /* lakeWaves.wav */,
+				717E6D4E2463BBF800484CB9 /* waterfall2.wav */,
+				717E6D512463BC8B00484CB9 /* cracklingFire1.wav */,
+				717E6D552463BE4000484CB9 /* vacuumCleaner1.wav */,
+				717E6D532463BE0300484CB9 /* owl1.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -396,6 +411,7 @@
 				7177B895245249D900B1651F /* Roboto-MediumItalic.ttf in Resources */,
 				7177B853245249D900B1651F /* Lato-LightItalic.ttf in Resources */,
 				7177B857245249D900B1651F /* Lato-Regular.ttf in Resources */,
+				717E6D542463BE0300484CB9 /* owl1.wav in Resources */,
 				71D8665C2462634D004C8EBF /* rainforest1.mp3 in Resources */,
 				7177B897245249D900B1651F /* Roboto-BoldItalic.ttf in Resources */,
 				7177B85B245249D900B1651F /* Lato-Light.ttf in Resources */,
@@ -407,14 +423,18 @@
 				7177B854245249D900B1651F /* Lato-Thin.ttf in Resources */,
 				7177B85C245249D900B1651F /* Lato-ThinItalic.ttf in Resources */,
 				7177B89A245249D900B1651F /* LICENSE.txt in Resources */,
+				717E6D522463BC8B00484CB9 /* cracklingFire1.wav in Resources */,
 				7177B893245249D900B1651F /* Roboto-Light.ttf in Resources */,
 				7177B899245249D900B1651F /* Roboto-Italic.ttf in Resources */,
 				7177B856245249D900B1651F /* Lato-Black.ttf in Resources */,
+				717E6D4C2463BB3D00484CB9 /* lakeWaves.wav in Resources */,
 				7177B858245249D900B1651F /* Lato-BlackItalic.ttf in Resources */,
 				7177B852245249D900B1651F /* Lato-Italic.ttf in Resources */,
 				7177B85A245249D900B1651F /* Lato-BoldItalic.ttf in Resources */,
+				717E6D562463BE4000484CB9 /* vacuumCleaner1.wav in Resources */,
 				7177B855245249D900B1651F /* Lato-Bold.ttf in Resources */,
 				7177B89C245249D900B1651F /* Roboto-Bold.ttf in Resources */,
+				717E6D502463BBF800484CB9 /* waterfall2.wav in Resources */,
 				7177B89E245249D900B1651F /* Roboto-Black.ttf in Resources */,
 				718A9397244B84BE0044B845 /* Assets.xcassets in Resources */,
 			);
