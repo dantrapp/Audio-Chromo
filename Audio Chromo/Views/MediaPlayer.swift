@@ -33,8 +33,16 @@ struct MediaPlayer: View {
     var soundFileType: String
     
     @State var audioplayer : AVAudioPlayer!
-
+    
+    func playSound(){
+    let playSound = Bundle.main.path(forResource: self.soundFile, ofType: self.soundFileType)
+              self.audioplayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: playSound!))
+            
+    }
+    
     var body: some View {
+        
+        
         
         VStack {
             VStack {
@@ -91,6 +99,7 @@ struct MediaPlayer: View {
                         //all of the play logic here
                         //
                         self.audioplayer.play()
+                    
                        
                     }) {
                          Image(systemName: "play.fill")
@@ -116,8 +125,11 @@ struct MediaPlayer: View {
          
         }
         .onAppear{
-            let playSound = Bundle.main.path(forResource: self.soundFile, ofType: self.soundFileType)
-            self.audioplayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: playSound!))
+            //play the sound
+            self.playSound()
+            //loop the sound
+                                            self.audioplayer.numberOfLoops = -1
+          
         }
         .frame(width: screen.width - 60)
                      .frame(height: 300)
@@ -127,7 +139,11 @@ struct MediaPlayer: View {
                  .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 10)
         
     }
+ 
+    
 }
+
+
 
 struct MediaPlayer_Previews: PreviewProvider {
     static var previews: some View {
