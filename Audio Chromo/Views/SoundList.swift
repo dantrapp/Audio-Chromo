@@ -78,10 +78,82 @@ let soundFileData = [
         icon: "swift",
         title: "1-4hz Delta Waves",
         text: "1-4hz Delta Waves",
-        soundFile: "1-4hzDelta",
+        soundFile: "1-4hzDeltaSmall",
         soundFileType: "mp3"
         
     ),
+    SoundDataStructure(
+           icon: "swift",
+           title: "Ocean Waves",
+           text: "Listen to the soothing sounds of ocean waves at night.",
+           soundFile: "oceanWaves",
+           soundFileType: "mp3"
+           
+       ),
+    SoundDataStructure(
+        icon: "swift",
+        title: "Gentle Rain",
+        text: "Listen to the relaxing sounds of rain gently falling at night.",
+        soundFile: "gentleRain",
+        soundFileType: "mp3"
+        
+    ),
+    SoundDataStructure(
+        icon: "swift",
+        title: "Salon Hair Dryer",
+        text: "Listen to the relaxing deep hum a salon hair dryer.",
+        soundFile: "salonHairDryer",
+        soundFileType: "mp3"
+        
+    ),
+    SoundDataStructure(
+        icon: "swift",
+        title: "Oscillating Floor Fan",
+        text: "Listen to the gentle humming of an oscillating fan.",
+        soundFile: "oscillatingFan",
+        soundFileType: "mp3"
+        
+    ),
+    SoundDataStructure(
+           icon: "swift",
+           title: "Giant Box Fan",
+           text: "Listen to the low, rolling droning of a giant box fan.",
+           soundFile: "boxFan",
+           soundFileType: "mp3"
+           
+       ),
+    SoundDataStructure(
+           icon: "swift",
+           title: "ASMR Crinkles",
+           text: "Listen to the sound of plastic crinkling.",
+           soundFile: "asmrCrinkles",
+           soundFileType: "mp3"
+           
+       ),
+    SoundDataStructure(
+              icon: "swift",
+              title: "ASMR Fast Tapping (Wood)",
+              text: "Listen to the sound of long fingernails tapping on wood.",
+              soundFile: "asmrFastWoodTapping",
+              soundFileType: "mp3"
+              
+          ),
+     SoundDataStructure(
+              icon: "swift",
+              title: "ASMR Touching Bristles",
+              text: "Listen to the sound of fingers pulling against the plastic bristles of a massage mat.",
+              soundFile: "asmrTouchingBristles",
+              soundFileType: "mp3"
+              
+          ),
+     SoundDataStructure(
+               icon: "swift",
+               title: "Crackling Bacon",
+               text: "Listen to the delicious sound of crackling bacon in a hot pan.",
+               soundFile: "smallBacon2",
+               soundFileType: "mp3"
+               
+           ),
     SoundDataStructure(
         icon: "swift",
         title: "285hz Tibetan Bowls",
@@ -90,12 +162,35 @@ let soundFileData = [
         soundFileType: "mp3"
         
     ),
-    
+    SoundDataStructure(
+             icon: "swift",
+             title: "White Noise",
+             text: "Concentrate with the relaxing sound of white noise.",
+             soundFile: "whiteNoise",
+             soundFileType: "wav"
+             
+         ),
+    SoundDataStructure(
+               icon: "swift",
+               title: "Brown Noise",
+               text: "Concentrate with the relaxing sound of brown noise.",
+               soundFile: "brownNoise4",
+               soundFileType: "wav"
+               
+           ),
+    SoundDataStructure(
+                  icon: "swift",
+                  title: "Pink Noise",
+                  text: "Concentrate with the relaxing sound of pink noise.",
+                  soundFile: "pinkNoise2",
+                  soundFileType: "wav"
+                  
+              ),
     SoundDataStructure(
         icon: "swift",
         title: "174hz ",
         text: "174hz Solfeggio Frequency",
-        soundFile: "174hz1",
+        soundFile: "174hz",
         soundFileType: "mp3"
         
     ),

@@ -34,6 +34,8 @@ struct MediaPlayer: View {
     
     @State var audioplayer : AVAudioPlayer!
     
+    @State var volume: Double = 0
+    
     func playSound(){
     let playSound = Bundle.main.path(forResource: self.soundFile, ofType: self.soundFileType)
               self.audioplayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: playSound!))
@@ -74,13 +76,13 @@ struct MediaPlayer: View {
                         .cornerRadius(1)
                         
                         //second frame (slider background)
-                        .frame(width: 190, height: 12, alignment: .leading)
+                        .frame(width: 180, height: 12, alignment: .leading)
                         .background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.20))
                         .cornerRadius(2)
                         .padding()
                         
                         //third frame
-                        .frame(width: screen.width - 150, alignment: .leading)
+                        .frame(width: screen.width - 205, alignment: .leading)
                         .frame(height: 24)
                         .background(Color.black.opacity(0.1))
                         .cornerRadius(12)
