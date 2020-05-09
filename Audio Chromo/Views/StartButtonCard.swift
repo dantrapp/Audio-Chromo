@@ -17,7 +17,7 @@ struct StartButtonCard: View {
     
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             
             
             //GET SOUNDS BUTTON OPEN MODAL (Subview)
@@ -27,6 +27,7 @@ struct StartButtonCard: View {
             }) {
                 
                 soundModal()
+                
                 
             }
             .sheet(isPresented: $getSounds) {
@@ -59,12 +60,31 @@ struct StartButtonCard: View {
                 self.colorSlider = Double(self.colorSlider) //FIXED!!! how do I get the colorSlider variable from another view here?!
                 
             }) {
-                Text("Start")
+                HStack {
+                    Image(systemName: "play")
+                    .renderingMode(.original)
+                                  .font(.system(size: 16, weight: .medium))
+                                  .frame(width: 36, height: 36)
+                                  .background(Color.white)
+                                  //add clipShape before shadow
+                                  .clipShape(Circle())
+                                  //add double drop shadow
+                                  .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                                  .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                    Text("Start")
+                }
                 
             }
             
             
         }
+        .frame(width: screen.width - 80)
+                           .frame(height: 280)
+                           .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))) 
+        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+         .shadow(color: Color.black.opacity(0.4), radius: 20, x: 0, y: 20)
     }
 }
 

@@ -122,6 +122,7 @@ struct Room: View {
                 //color view
                 ZStack {
                 
+                    //startButton ? 0:
                     
                     if selectColor {
                         
@@ -129,7 +130,8 @@ struct Room: View {
                     Text("\(colorSlider)")
                         .font(.title).bold()
                         
-            chooseColor.opacity(colorSlider * 0.05)
+                        chooseColor.opacity(colorSlider * 0.05)
+                
                             .edgesIgnoringSafeArea(.all)
                         
                         if startButton {
@@ -159,7 +161,7 @@ struct Room: View {
                         
                         
                     } else {
-                       //purple screen
+                       //purple screen: start screeen
                         
                         VStack {
                             Text("Choose Your Room Color")
@@ -478,7 +480,7 @@ struct Room: View {
 
 struct soundModal: View {
     var body: some View {
-        VStack {
+       HStack {
             
             Image(systemName: "headphones")
                 .renderingMode(.original)
@@ -497,7 +499,7 @@ struct soundModal: View {
 
 struct timerModal: View {
     var body: some View {
-        VStack {
+        HStack {
             
             Image(systemName: "clock")
                 .renderingMode(.original)
